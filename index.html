@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+		<title></title>
+
+		<!-- SAPUI5 Core Library -->
+		<script id="sap-ui-bootstrap"
+		src="https://sapui5.netweaver.ondemand.com/resources/sap-ui-core.js"
+		data-sap-ui-libs="sap.ui.commons"
+		data-sap-ui-theme="sap_bluecrystal"></script>
+	</head>
+	<body id="sapUiBody" class="sapUiBody">
+		<div id="doc-header"></div>
+		<div id="doc-content"  role="application" ></div>
+		<script>
+			jQuery(document).ready(function() {
+				//We want to see debug messages while developing
+				jQuery.sap.log.setLevel(jQuery.sap.log.Level.DEBUG);
+				
+				//Tell SAPUI5 to resolve namespace "com.yourdomain.yourapplication" to the local folder app
+				jQuery.sap.registerModulePath("de.blue_danube_it.blueui5", "./app");
+				
+				//Require bootstrap file
+				jQuery.sap.require("de.blue_danube_it.blueui5.Bootstrap");
+			});
+		</script>
+		
+	</body>
+</html>

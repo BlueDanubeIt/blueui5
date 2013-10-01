@@ -1,0 +1,15 @@
+html, body{
+	height: 100% !important;
+}
+
+#doc-header{
+	height:38px;overflow:hidden;
+}
+
+#doc-content{
+	height:100%;
+}
+
+.sapUiAppHdr .sapUiAppHdrLogo .sapUiImg{
+	height:25px;
+}

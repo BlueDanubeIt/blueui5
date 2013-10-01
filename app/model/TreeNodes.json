@@ -1,0 +1,81 @@
+{
+    "id": "root_node",
+    "text": "RootNode",
+    "expanded": true,
+    "nodes": [
+        {
+            "id": "getting_started",
+            "text": "Getting started with SAPUI5",
+            "expanded": false,
+            "nodes": [
+                {
+                    "id": "getting_started-introduction",
+                    "text": "Introduction",
+                    "icon": "https://sapui5.netweaver.ondemand.com/sdk/test-resources/sap/ui/commons/demokit/images/system.gif",
+                	"hasExpander" : false,
+                	"expanded" : false,
+                	"ViewType" : "HTML",
+      				"ViewId" : "blueui5-getting-started-detail",
+      				"ViewName" : "de.blue_danube_it.blueui5.views.getting_started.Introduction"
+      				
+                },
+                {
+                    "id": "getting_started-hello_world",
+                    "text": "Hello World",
+                	"ViewType" : "HTML",
+      				"ViewId" : "blueui5-hello-world-detail",
+      				"ViewName" : "de.blue_danube_it.blueui5.views.getting_started.HelloWorld"
+                }
+            ]
+        },
+        {
+            "id": "how_to_structure",
+            "text": "Structure of a SAPUI5 Application",
+            "isSelected": true,
+            "selectable": true,
+            "hasExpander": true
+        },
+        {
+            "id": "using_app_container",
+            "text": "Using an App Container",
+            "isSelected": true,
+            "selectable": true,
+            "hasExpander": true
+        },
+        {
+            "id": "mvc",
+            "text": "Model-Controller-View (MVC)",
+            "isSelected": true,
+            "selectable": true,
+            "hasExpander": true
+        },
+        {
+            "id": "data_binding",
+            "text": "Data Binding",
+            "isSelected": true,
+            "selectable": true,
+            "hasExpander": true
+        },
+        {
+            "id": "localization",
+            "text": "Localization",
+            "isSelected": true,
+            "selectable": true,
+            "hasExpander": true
+        },
+        {
+            "id": "navigation",
+            "text": "Navigation",
+            "isSelected": true,
+            "selectable": true,
+            "hasExpander": true
+        },
+        {
+            "id": "custom_controls",
+            "text": "Custom Controls",
+            "isSelected": true,
+            "selectable": true,
+            "hasExpander": true
+        }
+    ]
+}
