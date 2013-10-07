@@ -36,7 +36,7 @@ sap.ui.controller("de.blue_danube_it.blueui5.controllers.HomeMaster", {
 		
 		//Navigate to Settings Detail View
     	sap.ui.getCore().getEventBus().publish("nav", "to", 
-    			{id : model.getProperty(path + "/ViewId"),
+    			{id : model.getProperty(path + "/id"),
 		    		viewName : model.getProperty(path + "/ViewName"),
 		    		type : model.getProperty(path + "/ViewType"),
 		    		target : "Detail"

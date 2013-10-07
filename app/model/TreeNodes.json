@@ -15,7 +15,6 @@
                 	"hasExpander" : false,
                 	"expanded" : false,
                 	"ViewType" : "HTML",
-      				"ViewId" : "blueui5-getting-started-detail",
       				"ViewName" : "de.blue_danube_it.blueui5.views.getting_started.Introduction"
       				
                 },
@@ -23,7 +22,6 @@
                     "id": "getting_started-hello_world",
                     "text": "Hello World",
                 	"ViewType" : "HTML",
-      				"ViewId" : "blueui5-hello-world-detail",
       				"ViewName" : "de.blue_danube_it.blueui5.views.getting_started.HelloWorld"
                 }
             ]
@@ -33,21 +31,45 @@
             "text": "Structure of a SAPUI5 Application",
             "isSelected": true,
             "selectable": true,
-            "hasExpander": true
+            "hasExpander": true,
+            "nodes" : [
+            	{
+            		"text" : "Simplest structure",
+            		"id" : "how_to_structure-simplest",
+            		"ViewType" : "HTML",
+      				"ViewName" : "de.blue_danube_it.blueui5.views.how_to_structure.Simplest"
+        		}
+        	]
         },
         {
             "id": "using_app_container",
             "text": "Using an App Container",
             "isSelected": true,
             "selectable": true,
-            "hasExpander": true
+            "hasExpander": true,
+            "nodes" : [
+            	{
+            		"text" : "AppContainer",
+            		"id" : "using_app_container-app_container",
+            		"ViewType" : "HTML",
+      				"ViewName" : "de.blue_danube_it.blueui5.views.using_app_container.AppContainer"
+        		}
+        	]
         },
         {
             "id": "mvc",
             "text": "Model-Controller-View (MVC)",
             "isSelected": true,
             "selectable": true,
-            "hasExpander": true
+            "hasExpander": true,
+            "nodes" : [
+            	{
+            		"text" : "MVC in SAPUI5",
+            		"id" : "mvc-mvc_in_ui5",
+            		"ViewType" : "HTML",
+      				"ViewName" : "de.blue_danube_it.blueui5.views.mvc.MvcUi5"
+        		}
+        	]
         },
         {
             "id": "data_binding",
