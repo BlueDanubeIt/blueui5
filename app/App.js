@@ -1,12 +1,13 @@
 /*
  * 
- * Main module for your application
+ * Controller for home view (right side)
  * 
- * Author: Your Name
+ * Author: Eva Przybyllok - http://blue-danube-it-de
+ * Author: Philipp Knöller - http://pksoftware.de
  * 
- * Copyright (c) 2013 Your Company
+ * Copyright (c) 2013 Blue Danube IT
  * 
- * http://yourdomain.com
+ * http://blue-danube-it.de
  * 
  */
 
