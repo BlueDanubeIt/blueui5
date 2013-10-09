@@ -98,6 +98,21 @@
             "isSelected": true,
             "selectable": true,
             "hasExpander": true
+        },
+        {
+            "id": "odata",
+            "text": "Odata",
+            "isSelected": true,
+            "selectable": true,
+            "hasExpander": true,
+            "nodes": [
+                {
+                    "text": "oData in SAPUI5",
+                    "id": "odata_xml",
+                    "ViewType": "XML",
+                    "ViewName": "de.blue_danube_it.blueui5.views.odata.display"
+                }
+            ]
         }
     ]
 }
