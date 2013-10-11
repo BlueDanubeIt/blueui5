@@ -123,6 +123,7 @@
                     "id": "odata-odata_in_ui5_placeholder",
                     "ViewType": "XML",
                     "ViewName": "de.blue_danube_it.blueui5.views.odata.Display"
+                    
                 }
             ]
         }
