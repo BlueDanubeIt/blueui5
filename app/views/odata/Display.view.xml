@@ -13,25 +13,25 @@
         <table:Column width="100px" sortProperty="CustomerID">
             <Label text="Customer ID"></Label>
             <table:template>
-                <TextView text="{CustomerID}"></TextView>
+                <TextView text="{results>CustomerID}"></TextView>
             </table:template>
         </table:Column>
         <table:Column sortProperty="CompanyName">
             <Label text="Company Name"></Label>
             <table:template>
-                <TextView text="{CompanyName}"></TextView>
+                <TextView text="{results>CompanyName}"></TextView>
             </table:template>
         </table:Column>
         <table:Column hAlign="Center">
             <Label text="Contact Name"></Label>
             <table:template>
-                <TextView text="{ContactName}"></TextView>
+                <TextView text="{results>ContactName}"></TextView>
             </table:template>
         </table:Column>
         <table:Column>
             <Label text="Contact Title"></Label>
             <table:template>
-                <TextField value="{ContactTitle}"></TextField>
+                <TextField value="{results>ContactTitle}"></TextField>
             </table:template>
         </table:Column>
     </table:Table>
