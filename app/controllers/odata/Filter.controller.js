@@ -12,13 +12,16 @@
  * @param {json} object
  */
 sap.ui.controller("de.blue_danube_it.blueui5.controllers.odata.Filter", {
-    oDataMata: null,
+    oDataMeta: null,
     sPathEntitySet: "/dataServices/schema/1/entityContainer/0/entitySet",
     /**
-     * Called when a controller is instantiated and its View controls (if available) are already created.
-     * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
+     * Called when a controller is instantiated and its View 
+     * controls (if available) are already created.
+     * Can be used to modify the View before it is displayed, 
+     * to bind event handlers and do other one-time initialization.
      *
-     * Here we are initialising an oDataModel and set it as core model, using json as response.
+     * Here we are initialising an oDataModel and set it as core model, 
+     * using json as response.
      * @todo Documentation
      */
     onInit: function() {
@@ -32,24 +35,27 @@ sap.ui.controller("de.blue_danube_it.blueui5.controllers.odata.Filter", {
         var sServiceUrl = "/northwind/";
         var oModel = new sap.ui.model.odata.ODataModel(sServiceUrl, true);
         this.getView().setModel(oModel, "results");
-
-        this.oDataMata = oModel.getServiceMetadata();
-        var oMetaModel = new sap.ui.model.json.JSONModel(this.oDataMata);
+        
+        // reading oData meta data.
+        this.oDataMeta = oModel.getServiceMetadata();
+        var oMetaModel = new sap.ui.model.json.JSONModel(this.oDataMeta);
         var drop = this.byId("drop");
         drop.setModel(oMetaModel);
+        
         var oItemTemplateList = new sap.ui.core.ListItem({
             text: "{name}", 
             key: "{entityType}"
         });
-
+        // Binding  oData entity set to DropdownBox.
         drop.bindItems(this.sPathEntitySet, oItemTemplateList);
     },
     /**
      * @todo Documentation
-     * @param {string} sEntityType Entity type of entity set to fetch entity informations for.
+     * @param {string} sEntityType Entity type of entity set to fetch entity 
+     * informations for.
      */
     fetchEntityType: function(sEntityType) {
-        var oSchema = this.oDataMata.dataServices.schema[0];
+        var oSchema = this.oDataMeta.dataServices.schema[0];
         var oEntityTypes = oSchema.entityType;
         var aEntityType = sEntityType.split('.');
         var oEntityType = {};

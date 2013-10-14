@@ -1,33 +1,131 @@
-<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.ui.commons" xmlns:table="sap.ui.table"
-           controllerName="de.blue_danube_it.blueui5.controllers.odata.Display" xmlns:html="http://www.w3.org/1999/xhtml">
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" 
+           xmlns="sap.ui.commons" xmlns:table="sap.ui.table"
+           controllerName="de.blue_danube_it.blueui5.controllers.odata.Display" 
+           xmlns:html="http://www.w3.org/1999/xhtml">
     
-    <table:Table id="Customers" title="Customers" selectionMode="Single" rowSelectionChange="onRowSelect">
+    
+    <!-- ===== -->
+    <!-- Intro -->
+    <!-- ===== -->
+    
+    <html:h1>
+        <TextView text="Welcome to oData binding example!"></TextView>
+    </html:h1>
+    <html:p>
+        <TextView text="This Example uses the public Notrhwind service of"></TextView>
+        <Link text="Odata.org." href="http://www.odata.org/"></Link>
+    </html:p>
+    <html:p>
+        <TextView text="The Associated web service is: http://services.odata.org/Northwind/Northwind.svc/"></TextView>
+    </html:p>
+    
+    <html:h2>
+        <TextView text="Important note:"></TextView>
+    </html:h2>
+    
+    <html:p>
+        <TextView text="To call successfully a cross domain request using JavaScript, you need to setup a reverse proxy to the desired domain."></TextView>
+    </html:p>
+    
+    <html:p>
+        <TextView text="In this example we set up a reverse proxy"></TextView>
+        <Link text="http://sapui5.blue-dev.de/northwind/" href="http://sapui5.blue-dev.de/northwind/"></Link>
+        <TextView text=" which is pointing directly to"></TextView>
+        <Link text=" http://services.odata.org/Northwind/Northwind.svc/." href=" http://services.odata.org/Northwind/Northwind.svc/"></Link>
+    </html:p>
+    
+    <html:p>
+        <TextView text="An example how to set up an Apache reverse proxy can be found here: "></TextView>
+        <Link text="http://www.apachetutor.org/admin/reverseproxies" href="http://www.apachetutor.org/admin/reverseproxies"></Link>
+    </html:p>
+    
+    <html:h2>
+        <TextView text="Our first binding example:"></TextView>
+    </html:h2>
+    
+    <html:div>
+        <html:p>
+            <TextView text="In our first example we bind a list of customers to a table.">
+            </TextView>
+        </html:p>
+        <html:p>
+            <TextView text="Link to service request: http://services.odata.org/Northwind/Northwind.svc/Customers"></TextView>
+        </html:p>
+        <html:p>
+            <TextView text="To accomplish this, we need two objects."></TextView>
+        </html:p>
+        <html:ol>
+            <html:li>
+                <TextView text="sap.ui.model.odata.ODataModel"></TextView>
+                <html:br></html:br>
+                <TextView text="ODataModel sets up a connection to the service and triggers requests."></TextView>
+            </html:li>
+            <html:li>
+                <TextView text="sap.ui.table.Table"></TextView>
+                <html:br></html:br>
+                <TextView text="Table is used to display response data, delivered by our service."></TextView>
+            </html:li>
+        </html:ol>
+    </html:div>
+    
+    
+    <html:div>
+        <html:h2>
+            <TextView text="Links to this exapmle:"></TextView>
+        </html:h2>
+        <html:p>
+            <Link text="View" href="https://github.com/pks5/blueui5/blob/master/app/views/odata/Display.view.xml"></Link>
+        </html:p>
+        <html:p>
+            <Link text="Controller" href="https://github.com/pks5/blueui5/blob/master/app/controllers/odata/Display.controller.js"></Link>
+        </html:p>
+    </html:div>
+    
+    
+    <!-- ================================= -->
+    <!-- Binding Table: sap.ui.table.Table -->
+    <!-- ================================= -->
+    
+    
+    <html:div class="blue-example">
+    <!-- Table with fixed columns. Here we bind our Customer rows. -->
+    <table:Table id="Customers" title="Customers" 
+                 selectionMode="Single" rowSelectionChange="onRowSelect">
         <table:toolbar>
             <Toolbar>
+                <!-- Buttons to execute onBind and onUnbind. -->
                 <items>
-                    <Button text="Open..." press="onOpen"></Button>
+                    <Button text="Bind" press="onBind"></Button>
+                    <Button text="Unbind" press="onUnbind"></Button>
                 </items>
             </Toolbar>
         </table:toolbar>
         
+        <!-- Column to bind CustomerID of Customers -->
         <table:Column width="100px" sortProperty="CustomerID">
             <Label text="Customer ID"></Label>
             <table:template>
                 <TextView text="{results>CustomerID}"></TextView>
             </table:template>
         </table:Column>
+        
+        <!-- Column to bind CompanyName of Customers -->
         <table:Column sortProperty="CompanyName">
             <Label text="Company Name"></Label>
             <table:template>
                 <TextView text="{results>CompanyName}"></TextView>
             </table:template>
         </table:Column>
+        
+        <!-- Column to bind ContactName of Customers -->
         <table:Column hAlign="Center">
             <Label text="Contact Name"></Label>
             <table:template>
                 <TextView text="{results>ContactName}"></TextView>
             </table:template>
         </table:Column>
+        
+        <!-- Column to bind ContactTitle of Customers -->
         <table:Column>
             <Label text="Contact Title"></Label>
             <table:template>
@@ -35,4 +133,48 @@
             </table:template>
         </table:Column>
     </table:Table>
+    
+    </html:div>
+    
+    
+    <!-- ===================== -->
+    <!-- Html with sourceCode. -->
+    <!-- ===================== -->
+    
+    
+    <html:div>
+        <html:h2>
+            <TextView text="Binding of Customer"></TextView>
+        </html:h2>
+        <html:h3>
+            <TextView text="Setup connection to an oData service."></TextView>
+        </html:h3>
+        <html:code>
+            <TextView id="text_onInit"></TextView>
+        </html:code>
+        <html:h3>
+            <TextView text="Bind Customers to our table."></TextView>
+        </html:h3>
+        <html:code>
+            <TextView id="text_onBind"></TextView>
+        </html:code>
+        <html:h3>
+            <TextView text="Unbind (cleanup Rows)"></TextView>
+        </html:h3>
+        <html:code>
+            <TextView id="text_onUnbind"></TextView>
+        </html:code>
+        <html:h3>
+            <TextView text="Function called on row select change"></TextView>
+        </html:h3>
+        <html:code>
+            <TextView id="text_onRowSelect"></TextView>
+        </html:code>
+        <html:h3>
+            <TextView text="Table in xml view"></TextView>
+        </html:h3>
+        <html:code>
+            <TextView id="text_table"></TextView>
+        </html:code>
+    </html:div>
 </core:View>
