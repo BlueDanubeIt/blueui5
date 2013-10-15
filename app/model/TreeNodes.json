@@ -102,25 +102,26 @@
         {
             "id": "odata",
             "text": "Odata",
-            "isSelected": true,
-            "selectable": true,
-            "hasExpander": true,
+            "expanded": true,
             "nodes": [
                 {
                     "text": "oData in SAPUI5",
                     "id": "odata-odata_in_ui5_display",
+                    "hasExpander" : false,
                     "ViewType": "XML",
                     "ViewName": "de.blue_danube_it.blueui5.views.odata.Display"
                 },
                 {
                     "text": "oData Filter",
                     "id": "odata-odata_in_ui5_filter",
+                    "hasExpander" : false,
                     "ViewType": "XML",
                     "ViewName": "de.blue_danube_it.blueui5.views.odata.Filter"
                 },
                 {
                     "text": "oData Placeholder",
                     "id": "odata-odata_in_ui5_placeholder",
+                    "hasExpander" : false,
                     "ViewType": "XML",
                     "ViewName": "de.blue_danube_it.blueui5.views.odata.Display"
                     

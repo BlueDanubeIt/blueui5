@@ -77,6 +77,11 @@ sap.ui.controller("de.blue_danube_it.blueui5.controllers.odata.Display", {
     onUnbind:function(oEvent){
         this.byId("Customers").unbindRows();
     },
+    
+    // ====================
+    // == Unimportant... ==
+    // ====================
+    
     /**
      * Used to display content of this controller functions.
      * 

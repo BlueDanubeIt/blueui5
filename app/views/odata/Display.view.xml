@@ -35,7 +35,7 @@
     </html:p>
     
     <html:p>
-        <TextView text="An example how to set up an Apache reverse proxy can be found here: "></TextView>
+        <TextView text="a tutorial how to set up an Apache reverse proxy can be found here: "></TextView>
         <Link text="http://www.apachetutor.org/admin/reverseproxies" href="http://www.apachetutor.org/admin/reverseproxies"></Link>
     </html:p>
     
@@ -74,12 +74,28 @@
             <TextView text="Links to this exapmle:"></TextView>
         </html:h2>
         <html:p>
+            <TextView text="All our examples are accessable on github."></TextView>
+            <html:br></html:br>
+            <TextView text="Use 'git clone git@github.com:pks5/blueui5.git' to clone the project or download it directly from our project repository."></TextView>
+        </html:p>
+        <html:p>
+            <TextView text="Link to Repository: "></TextView>
+            <Link text="Project repository" href="https://github.com/pks5/blueui5/"></Link>
+        </html:p>
+        <html:p>
+            <TextView text="Link to the view of this Expample: "></TextView>
             <Link text="View" href="https://github.com/pks5/blueui5/blob/master/app/views/odata/Display.view.xml"></Link>
         </html:p>
         <html:p>
+            <TextView text="Link to the controller of this Expample: "></TextView>
             <Link text="Controller" href="https://github.com/pks5/blueui5/blob/master/app/controllers/odata/Display.controller.js"></Link>
         </html:p>
+        <html:p>
+            
+        </html:p>
     </html:div>
+    
+    
     
     
     <!-- ================================= -->
@@ -88,6 +104,12 @@
     
     
     <html:div class="blue-example">
+    <html:h2>
+        <TextView text="Binding Example"></TextView>
+    </html:h2>
+    <html:p>
+        <TextView text="Usage: Click 'Bind' to bind Customers to table and 'Unbind' to clean table."></TextView>
+    </html:p>
     <!-- Table with fixed columns. Here we bind our Customer rows. -->
     <table:Table id="Customers" title="Customers" 
                  selectionMode="Single" rowSelectionChange="onRowSelect">
