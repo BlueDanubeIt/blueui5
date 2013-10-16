@@ -85,15 +85,18 @@ sap.ui.controller("de.blue_danube_it.blueui5.controllers.odata.Filter", {
             table.unbindRows();
             jQuery.each(oEntityType.property, function() {
                 var sPath = "{results>" + this.name + "}";
-
+                var oControl = new sap.ui.commons.TextView({
+                    text: 'not implemented'
+                });
                 switch (this.type) {
                     case 'Edm.Binary':
                         break;
                     case 'Edm.Int32':
                     default:
-                        var oControl = new sap.ui.commons.TextView({
+                        oControl = new sap.ui.commons.TextView({
                             text: sPath
                         });
+                    	break;
                 }
 
                 table.addColumn(new sap.ui.table.Column({

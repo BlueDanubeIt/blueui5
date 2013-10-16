@@ -125,6 +125,42 @@
                     "ViewType": "XML",
                     "ViewName": "de.blue_danube_it.blueui5.views.odata.Display"
                     
+                },
+                {
+                    "text": "oData Test",
+                    "id": "odata-odata_in_ui5_test",
+                    "hasExpander" : false,
+                    "ViewType": "HTML",
+                    "ViewName": "de.blue_danube_it.blueui5.views.odata.Testing"
+                    
+                }
+            ]
+        },
+        {
+            "id": "sven",
+            "text": "Sven",
+            "expanded": true,
+            "nodes": [
+                {
+                    "text": "Meine kleine Welt",
+                    "id": "sven-meine_kleine_welt",
+                    "hasExpander" : false,
+                    "ViewType": "HTML",
+                    "ViewName": "de.blue_danube_it.blueui5.views.sven.MyView"
+                }
+            ]
+        },
+        {
+            "id": "marius",
+            "text": "Marius",
+            "expanded": true,
+            "nodes": [
+                {
+                    "text": "Meine kleine Welt",
+                    "id": "marius-meine_kleine_welt",
+                    "hasExpander" : false,
+                    "ViewType": "HTML",
+                    "ViewName": "de.blue_danube_it.blueui5.views.marius.MyView"
                 }
             ]
         }

@@ -41,3 +41,6 @@ Thumbs.db
 public/var/bv/img/users
 /nbproject/private/
 /nbproject/
+
+/META-INF/
+/WEB-INF/

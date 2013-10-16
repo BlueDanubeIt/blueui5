@@ -7,9 +7,6 @@
  * @author Markus Bittner <mb@blue-danube-it.de>
  * 
  * @version 2013-10-11
- * 
- * @param {string} controller
- * @param {json} object
  */
 sap.ui.controller("de.blue_danube_it.blueui5.controllers.odata.Display", {
     // Connection success flag.
@@ -41,6 +38,7 @@ sap.ui.controller("de.blue_danube_it.blueui5.controllers.odata.Display", {
         // Custom Control to render source code follows.
         this.renderFunctionsContent();
     },
+    
     /**
      * When table row selection changes, we display binding information's 
      * of this row.
@@ -51,6 +49,7 @@ sap.ui.controller("de.blue_danube_it.blueui5.controllers.odata.Display", {
         var entityPath = oEvent.getParameter('rowContext').sPath;
         alert('Row ' + rowIndex + '\n\nPath to Entity: "' + entityPath + '"');
     },
+    
     /**
      * If odata connection was set up propperly, we bind Customers to our table.
      * As binding is done, odata result is rendered.
