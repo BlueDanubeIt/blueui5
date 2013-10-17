@@ -2,6 +2,45 @@
     <div data-sap-ui-type="sap.ui.commons.Label" data-text="HelloWorld">
          
     </div>
+    
+    <!-- Accordion -->
+    <div data-sap-ui-type="sap.ui.commons.Accordion" data-width="200px">
+         <div data-sap-ui-aggregation="sections">
+         	<div data-sap-ui-type="sap.ui.commons.AccordionSection">
+         		 <div data-sap-ui-aggregation="content">
+         		 	<div data-sap-ui-type="sap.ui.commons.Label" data-text="Section 1"></div>
+         		 </div>
+         	</div> 
+         	<div data-sap-ui-type="sap.ui.commons.AccordionSection">
+         		 <div data-sap-ui-aggregation="content">
+         		 	<div data-sap-ui-type="sap.ui.commons.Label" data-text="Section 2"></div>
+         		 </div>
+         	</div> 
+         	<div data-sap-ui-type="sap.ui.commons.AccordionSection">
+         		 <div data-sap-ui-aggregation="content">
+         		 	<div data-sap-ui-type="sap.ui.commons.Label" data-text="Section 3"></div>
+         		 </div>
+         	</div>         	
+         </div>
+    </div>
+    <!-- END Accordion -->
+    
+    <!-- Prettyprint test -->
+    <div data-sap-ui-type="de.blue_danube_it.utils5.prettify.PrettyPrint">
+    	
+    		<div>
+    		
+    		class Voila {
+public:
+  // Voila
+  static const string VOILA = "Voila";
+
+  // will not interfere with embedded tags.
+}
+    		</div>
+    	
+    </div>
+    <!-- END Prettyprint test -->
 </template>
 
 

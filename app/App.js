@@ -12,6 +12,7 @@
  */
 
 jQuery.sap.declare("de.blue_danube_it.blueui5.App");
+jQuery.sap.require("com.twitter.bootstrap.controls.NavBar");
 
 sap.ui.base.ManagedObject.extend("de.blue_danube_it.blueui5.App", {
 	metadata : {
@@ -29,6 +30,18 @@ de.blue_danube_it.blueui5.App.prototype.init = function(){
 	//Tell SAPUI5 where to find pks5application
 	jQuery.sap.registerModulePath("de.pksoftware.pks5", "./lib/pks5");
 	
+	//Tell SAPUI5 where to find utils5
+	jQuery.sap.registerModulePath("de.blue_danube_it.utils5", "./lib/utils5");
+	
+	//Include Bootstrap Css
+	var bootstrapLibrary = jQuery.sap.getModulePath("com.twitter.bootstrap");
+	jQuery.sap.includeStyleSheet(bootstrapLibrary + "/css/bootstrap.min.css", "bootstrap-min-css");
+	
+	//Header
+	//var header = new sap.ui.commons.ApplicationHeader({logoSrc : "http://www.blue-danube-it.de/templates/blue-danube-it/logo.png"});
+	var header = new com.twitter.bootstrap.controls.NavBar({brand : "Blue Danube IT"});
+	header.placeAt('doc-header');
+	
 	//Require pks5application
 	jQuery.sap.require("de.pksoftware.pks5.PKS5SplitterApplication");
 	
@@ -40,6 +53,9 @@ de.blue_danube_it.blueui5.App.prototype.init = function(){
 	
 	this._modulePath = jQuery.sap.getModulePath("de.blue_danube_it.blueui5");
 
+	//Blue UI5 Css
+	jQuery.sap.includeStyleSheet(this._modulePath + "/css/blueui5.css", "blueui5css");
+	
 	//Localization
 	this._localization = new sap.ui.model.resource.ResourceModel({
 		bundleUrl : this._modulePath + "/i18n/i18n.properties"

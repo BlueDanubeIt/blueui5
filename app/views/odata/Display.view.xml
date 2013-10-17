@@ -1,8 +1,10 @@
 <core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" 
            xmlns="sap.ui.commons" xmlns:table="sap.ui.table"
+           xmlns:utils5="de.blue_danube_it.utils5" xmlns:bootstrap="com.twitter.bootstrap.controls"
            controllerName="de.blue_danube_it.blueui5.controllers.odata.Display" 
            xmlns:html="http://www.w3.org/1999/xhtml">
     
+   
     
     <!-- ===== -->
     <!-- Intro -->
@@ -198,5 +200,22 @@
         <html:code>
             <TextView id="text_table"></TextView>
         </html:code>
+        <utils5:prettify.PrettyPrint>
+        	<html:div>
+        	<![CDATA[
+		<!-- Collumn to bind ContactTitle of Customers -->
+        <table:Column>
+            <Label text="Contact Title"></Label>
+            <table:template>
+                <TextField value="{results>ContactTitle}"></TextField>
+            </table:template>
+        </table:Column>
+    </table:Table>
+    		]]>
+			</html:div>
+        	
+        </utils5:prettify.PrettyPrint>
     </html:div>
+    
+    
 </core:View>

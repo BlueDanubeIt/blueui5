@@ -1,4 +1,4 @@
-/*
+/**
  * 
  * Controller for home view (right side)
  * 

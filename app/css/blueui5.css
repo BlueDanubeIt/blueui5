@@ -3,11 +3,11 @@ html, body{
 }
 
 #doc-header{
-	height:38px;overflow:hidden;
+	height:50px;overflow:hidden;
 }
 
 #doc-content{
-	height:100%;
+	height:90%;
 }
 
 .sapUiAppHdr .sapUiAppHdrLogo .sapUiImg{

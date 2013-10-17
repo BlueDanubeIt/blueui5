@@ -10,6 +10,7 @@
 		src="https://sapui5.netweaver.ondemand.com/resources/sap-ui-core.js"
 		data-sap-ui-libs="sap.ui.commons,sap.ui.table"
 		data-sap-ui-theme="sap_bluecrystal"></script>
+		
 	</head>
 	<body id="sapUiBody" class="sapUiBody">
 		<div id="doc-header"></div>
@@ -22,8 +23,14 @@
 				//Tell SAPUI5 to resolve namespace "com.yourdomain.yourapplication" to the local folder app
 				jQuery.sap.registerModulePath("de.blue_danube_it.blueui5", "./app");
 				
-				//Require bootstrap file
-				jQuery.sap.require("de.blue_danube_it.blueui5.Bootstrap");
+				//Tell SAPUI5 where to find Twitter bootstrap
+				jQuery.sap.registerModulePath("com.twitter.bootstrap", "./lib/bootstrap-3.0");
+				
+				//Require App
+				jQuery.sap.require("de.blue_danube_it.blueui5.App");
+				
+				//Create a new App
+				var app = new de.blue_danube_it.blueui5.App();
 			});
 		</script>
 		
