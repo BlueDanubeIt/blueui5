@@ -1,12 +1,40 @@
 <template data-controller-name="de.blue_danube_it.blueui5.controllers.odata.Testing">
+
+<div id="odata-testing_listBox" data-sap-ui-type="sap.ui.commons.ListBox" data-items="{schema1>/entityContainer/0/entitySet}">
+	<div data-sap-ui-aggregation="items">
+		<div data-sap-ui-type="sap.ui.core.Item" data-text="{schema1>name}" data-key="{schema1>entityType}"></div>
+	</div>
+</div>
+
 <div data-sap-ui-type="sap.ui.commons.layout.VerticalLayout">
 	<div data-sap-ui-aggregation="content">
 		<div data-sap-ui-type="sap.ui.commons.TextView" data-text="Hallo!"></div>
-		<div data-sap-ui-type="sap.ui.table.Table" data-rows="{results>/Customers}">
+		<div data-sap-ui-type="sap.ui.commons.DropdownBox" data-association-list-box="odata-testing_listBox">
+				
+		</div>
+		<div data-sap-ui-type="sap.ui.table.Table" data-rows="{results>/Customers}" data-columns="{meta>/columns}">
 			<div data-sap-ui-aggregation="title">
 				<div id="table_title" data-sap-ui-type="sap.ui.commons.TextView" data-text="Table Title"></div>
 			</div>
+			<div data-sap-ui-aggregation="columns">
+				<div data-dap-ui-type="sap.ui.table.Column">
+					<div data-sap-ui-aggregation="template">
+						<div data-sap-ui-type="sap.ui.commons.TextView" data-text="{lala}"></div>
+					</div>	
+				</div>
+			</div>
+			<div data-sap-ui-aggregation="rows"></div>
+			<div data-sap-ui-aggregation="toolbar">
+				<div data-sap-ui-type="sap.ui.commons.Toolbar">
+					<div data-sap-ui-aggregation="items">
+						<div data-sap-ui-type="sap.ui.commons.Button">
+							
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
+		
 	</div>
 </div>
 </template>
