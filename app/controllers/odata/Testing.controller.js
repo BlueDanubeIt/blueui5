@@ -12,8 +12,23 @@ sap.ui.controller("de.blue_danube_it.blueui5.controllers.odata.Testing", {
 		 try {
             // Set up connection.
             var oModel = new sap.ui.model.odata.ODataModel(this.sServiceUrl, true);
+            
             if(oModel.getServiceMetadata()){
+//            	oModel.get
+//          	  	debugger;
+            	var serviceMeta = oModel.getServiceMetadata();
+            	var oServiceModel = new sap.ui.model.json.JSONModel(serviceMeta);
+            	
+            	var schema0 = oServiceModel.getProperty('/dataServices/schema/0');
+            	var schema1 = oServiceModel.getProperty('/dataServices/schema/1');
+            	
+            	var oSchemaModel0 = new sap.ui.model.json.JSONModel(schema0);
+            	var oSchemaModel1 = new sap.ui.model.json.JSONModel(schema1);
+            	
                 this.getView().setModel(oModel, "results");
+                this.getView().setModel(oSchemaModel0, "schema0");
+                this.getView().setModel(oSchemaModel1, "schema1");
+                
                 this.success = true;
             }
         } catch(eException){}
