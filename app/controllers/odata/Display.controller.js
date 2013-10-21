@@ -34,7 +34,7 @@ sap.ui.controller("de.blue_danube_it.blueui5.controllers.odata.Display", {
                 this.getView().setModel(oModel, "results");
                 this.success = true;
             }
-        } catch(eException){}
+        } catch(eException){}	
         // Custom Control to render source code follows.
         this.renderFunctionsContent();
     },
