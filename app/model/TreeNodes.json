@@ -63,6 +63,12 @@
             "selectable": true,
             "hasExpander": true,
             "nodes" : [
+            {
+            		"text" : "Overview",
+            		"id" : "bootstrapui5-overview",
+            		"ViewType" : "HTML",
+      				"ViewName" : "de.blue_danube_it.blueui5.views.bootstrap.Overview"
+        		},
             	{
             		"text" : "Links & Buttons",
             		"id" : "bootstrapui5-links_buttons",

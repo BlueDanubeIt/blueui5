@@ -70,13 +70,15 @@ de.blue_danube_it.blueui5.App.prototype.init = function(){
 	sap.ui.getCore().getEventBus().publish("nav", "to", {id : "blueui5-home-master",
 					viewName : "de.blue_danube_it.blueui5.views.HomeMaster",
 					type : sap.ui.core.mvc.ViewType.HTML,
-					target : 'Master'});
+					target : 'Master',
+					writeHistory : true});
 	
 	//Navigate to Home Detail View
 	sap.ui.getCore().getEventBus().publish("nav", "to", {id : "blueui5-home-detail",
 		viewName : "de.blue_danube_it.blueui5.views.Home",
 		type : sap.ui.core.mvc.ViewType.HTML,
-		target : 'Detail'});
+		target : 'Detail',
+		writeHistory : true});
 };
 
 de.blue_danube_it.blueui5._static = {};

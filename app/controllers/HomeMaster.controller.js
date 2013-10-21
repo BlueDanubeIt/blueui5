@@ -39,7 +39,8 @@ sap.ui.controller("de.blue_danube_it.blueui5.controllers.HomeMaster", {
     			{id : model.getProperty(path + "/id"),
 		    		viewName : model.getProperty(path + "/ViewName"),
 		    		type : model.getProperty(path + "/ViewType"),
-		    		target : "Detail"
+		    		target : "Detail",
+		    		writeHistory : true
 		    	});
 	}
 	
@@ -78,7 +79,8 @@ de.blue_danube_it.blueui5._static.onLinkClicked = function (oEvent) {
 			{id : oSource.getViewId(),
 	    		viewName : oSource.getViewName(),
 	    		type : oSource.getViewType(),
-	    		target : "Detail"
+	    		target : "Detail",
+	    		writeHistory : true
 	    	});
 	//alert('test');
 	//console.log(de.blue_danube_it);
