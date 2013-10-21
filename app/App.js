@@ -12,7 +12,7 @@
  */
 
 jQuery.sap.declare("de.blue_danube_it.blueui5.App");
-jQuery.sap.require("com.twitter.bootstrap.controls.NavBar");
+jQuery.sap.require("de.pksoftware.bootstrapui5.controls.NavBar");
 
 sap.ui.base.ManagedObject.extend("de.blue_danube_it.blueui5.App", {
 	metadata : {
@@ -34,12 +34,13 @@ de.blue_danube_it.blueui5.App.prototype.init = function(){
 	jQuery.sap.registerModulePath("de.blue_danube_it.utils5", "./lib/utils5");
 	
 	//Include Bootstrap Css
+	jQuery.sap.registerModulePath("com.twitter.bootstrap", "./lib/bootstrap-3.0");
 	var bootstrapLibrary = jQuery.sap.getModulePath("com.twitter.bootstrap");
 	jQuery.sap.includeStyleSheet(bootstrapLibrary + "/css/bootstrap.min.css", "bootstrap-min-css");
 	
 	//Header
 	//var header = new sap.ui.commons.ApplicationHeader({logoSrc : "http://www.blue-danube-it.de/templates/blue-danube-it/logo.png"});
-	var header = new com.twitter.bootstrap.controls.NavBar({brand : "Blue Danube IT"});
+	var header = new de.pksoftware.bootstrapui5.controls.NavBar({brand : "Blue Danube IT"});
 	header.placeAt('doc-header');
 	
 	//Require pks5application

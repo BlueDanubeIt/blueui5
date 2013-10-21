@@ -1,6 +1,6 @@
 <core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" 
            xmlns="sap.ui.commons" xmlns:table="sap.ui.table"
-           xmlns:utils5="de.blue_danube_it.utils5" xmlns:bootstrap="com.twitter.bootstrap.controls"
+           xmlns:utils5="de.blue_danube_it.utils5" xmlns:bootstrap="de.pksoftware.bootstrapui5.controls"
            controllerName="de.blue_danube_it.blueui5.controllers.odata.Display" 
            xmlns:html="http://www.w3.org/1999/xhtml">
     
