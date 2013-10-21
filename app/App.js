@@ -77,3 +77,5 @@ de.blue_danube_it.blueui5.App.prototype.init = function(){
 		type : sap.ui.core.mvc.ViewType.HTML,
 		target : 'Detail'});
 };
+
+de.blue_danube_it.blueui5._static = {};

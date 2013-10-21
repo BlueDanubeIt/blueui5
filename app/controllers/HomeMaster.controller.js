@@ -68,3 +68,18 @@ sap.ui.controller("de.blue_danube_it.blueui5.controllers.HomeMaster", {
 //		return oTreeNode;
 //	}
 });
+
+
+de.blue_danube_it.blueui5._static.onLinkClicked = function (oEvent) {
+	var oSource = oEvent.getSource();
+	
+	//Navigate to Settings Detail View
+	sap.ui.getCore().getEventBus().publish("nav", "to", 
+			{id : oSource.getViewId(),
+	    		viewName : oSource.getViewName(),
+	    		type : oSource.getViewType(),
+	    		target : "Detail"
+	    	});
+	//alert('test');
+	//console.log(de.blue_danube_it);
+};
