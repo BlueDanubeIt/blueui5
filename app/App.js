@@ -38,16 +38,11 @@ de.blue_danube_it.blueui5.App.prototype.init = function(){
 	var bootstrapLibrary = jQuery.sap.getModulePath("com.twitter.bootstrap");
 	jQuery.sap.includeStyleSheet(bootstrapLibrary + "/css/bootstrap.min.css", "bootstrap-min-css");
 	
-	//Header
-	//var header = new sap.ui.commons.ApplicationHeader({logoSrc : "http://www.blue-danube-it.de/templates/blue-danube-it/logo.png"});
-	var header = new de.pksoftware.bootstrapui5.controls.NavBar({brand : "Blue Danube IT"});
-	header.placeAt('doc-header');
-	
 	//Require pks5application
-	jQuery.sap.require("de.pksoftware.pks5.PKS5SplitterApplication");
+	jQuery.sap.require("de.pksoftware.pks5.BootstrapUi5App");
 	
 	//Create a new PKS5Application
-	var pks5 = new de.pksoftware.pks5.PKS5SplitterApplication({
+	var pks5 = new de.pksoftware.pks5.BootstrapUi5App({
         root : "doc-content"
     });
 	
@@ -78,6 +73,13 @@ de.blue_danube_it.blueui5.App.prototype.init = function(){
 		viewName : "de.blue_danube_it.blueui5.views.Home",
 		type : sap.ui.core.mvc.ViewType.HTML,
 		target : 'Detail',
+		writeHistory : true});
+	
+	//Navigate to Home Detail View
+	sap.ui.getCore().getEventBus().publish("nav", "to", {id : "blueui5-header",
+		viewName : "de.blue_danube_it.blueui5.views.Header",
+		type : sap.ui.core.mvc.ViewType.HTML,
+		target : 'Header',
 		writeHistory : true});
 };
 

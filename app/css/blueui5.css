@@ -3,13 +3,9 @@ html, body{
 }
 
 #doc-header{
-	height:50px;overflow:hidden;
+	hseight:50px;overflow:hidden;
 }
 
 #doc-content{
-	height:90%;
-}
-
-.sapUiAppHdr .sapUiAppHdrLogo .sapUiImg{
-	height:25px;
+	hseight:90%;
 }
