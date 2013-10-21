@@ -27,32 +27,62 @@
             ]
         },
         {
-            "id": "how_to_structure",
-            "text": "Structure of a SAPUI5 Application",
+            "id": "ui_commons",
+            "text": "UI Commons",
             "isSelected": true,
             "selectable": true,
             "hasExpander": true,
             "nodes" : [
             	{
-            		"text" : "Simplest structure",
-            		"id" : "how_to_structure-simplest",
+            		"text" : "Label",
+            		"id" : "ui_commons-label",
             		"ViewType" : "HTML",
-      				"ViewName" : "de.blue_danube_it.blueui5.views.how_to_structure.Simplest"
+      				"ViewName" : "de.blue_danube_it.blueui5.views.ui_commons.Label"
         		}
         	]
         },
         {
-            "id": "bootstrap",
-            "text": "Using Twitter Bootstrap",
+            "id": "mobile",
+            "text": "Mobile",
+            "isSelected": true,
+            "selectable": true,
+            "hasExpander": true,
+            "nodes" : [
+            	{
+            		"text" : "Label",
+            		"id" : "mobile-label",
+            		"ViewType" : "HTML",
+      				"ViewName" : "de.blue_danube_it.blueui5.views.mobile.Label"
+        		}
+        	]
+        },
+        {
+            "id": "bootstrapui5",
+            "text": "BootstrapUI5",
             "isSelected": true,
             "selectable": true,
             "hasExpander": true,
             "nodes" : [
             	{
             		"text" : "Links & Buttons",
-            		"id" : "bootstrap-links_buttons",
+            		"id" : "bootstrapui5-links_buttons",
             		"ViewType" : "HTML",
       				"ViewName" : "de.blue_danube_it.blueui5.views.bootstrap.LinksButtons"
+        		}
+        	]
+        },
+         {
+            "id": "utils5",
+            "text": "Utils5",
+            "isSelected": true,
+            "selectable": true,
+            "hasExpander": true,
+            "nodes" : [
+            	{
+            		"text" : "Pretty Print",
+            		"id" : "utils5-pretty_print",
+            		"ViewType" : "HTML",
+      				"ViewName" : "de.blue_danube_it.blueui5.views.utils5.PrettyPrint"
         		}
         	]
         },
