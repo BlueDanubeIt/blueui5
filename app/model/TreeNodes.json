@@ -42,17 +42,17 @@
         	]
         },
         {
-            "id": "using_app_container",
-            "text": "Using an App Container",
+            "id": "bootstrap",
+            "text": "Using Twitter Bootstrap",
             "isSelected": true,
             "selectable": true,
             "hasExpander": true,
             "nodes" : [
             	{
-            		"text" : "AppContainer",
-            		"id" : "using_app_container-app_container",
+            		"text" : "Links & Buttons",
+            		"id" : "bootstrap-links_buttons",
             		"ViewType" : "HTML",
-      				"ViewName" : "de.blue_danube_it.blueui5.views.using_app_container.AppContainer"
+      				"ViewName" : "de.blue_danube_it.blueui5.views.bootstrap.LinksButtons"
         		}
         	]
         },
