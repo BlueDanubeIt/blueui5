@@ -18,6 +18,15 @@
 	<div data-sap-ui-type="com.twitter.bootstrap.controls.PageHeader" data-header-text="OData" data-sub-text="Using filter in oData!"></div>
 	<div data-sap-ui-type="com.twitter.bootstrap.controls.Lead" data-text="Lead text.!"></div>
 
+	<div data-sap-ui-type="com.twitter.bootstrap.controls.SubHeading" data-icon="glyphicon glyphicon-list" data-header-text="Service Metadata" data-sub-text="Sub text: Description?">
+		<div data-sap-ui-type="com.twitter.bootstrap.controls.Paragraph" data-text="Set up meta model">
+			
+	   	</div>
+    	<div data-sap-ui-type="com.twitter.bootstrap.controls.Paragraph" data-text="How to bind Meta">
+			<div data-sap-ui-type="de.blue_danube_it.utils5.prettify.PrettyPrint" data-source="{pretty>/onInit}"></div>	
+		</div>
+	</div>
+
 	<div data-sap-ui-type="com.twitter.bootstrap.controls.Row">
 		<div data-sap-ui-type="com.twitter.bootstrap.controls.Col" data-col-count="2" data-device-type="md">
 			<div data-sap-ui-type="sap.ui.commons.Label" data-text="Select entity type:" id="odata-dropdown_box_entity_type_Label" data-label-for="odata-dropdown_box_entity_type"></div>
@@ -31,17 +40,6 @@
 		
 	</div>
 
-	<div data-sap-ui-type="com.twitter.bootstrap.controls.SubHeading" data-icon="glyphicon glyphicon-list" data-header-text="Service Metadata" data-sub-text="Sub text: Description?">
-		<div data-sap-ui-type="com.twitter.bootstrap.controls.Paragraph" data-text="Set up meta model">
-			
-	   	</div>
-    	<div data-sap-ui-type="com.twitter.bootstrap.controls.Paragraph" data-text="How to bind Meta">
-			<div data-sap-ui-type="de.blue_danube_it.utils5.prettify.PrettyPrint" data-source="{pretty>/onInit}"></div>	
-		</div>
-	</div>
-
-	
-
 
 	<div data-sap-ui-type="sap.ui.table.Table"
 		data-rows="{results>/Customers}" data-columns="{meta>/columns}">
@@ -52,7 +50,7 @@
 		<div data-sap-ui-aggregation="columns">
 			<div data-dap-ui-type="sap.ui.table.Column">
 				<div data-sap-ui-aggregation="template">
-					<div data-sap-ui-type="sap.ui.commons.TextView" data-text="{lala}"></div>
+					<div data-sap-ui-type="sap.ui.commons.TextView" data-text="{name}"></div>
 				</div>
 			</div>
 		</div>
@@ -60,9 +58,19 @@
 		<div data-sap-ui-aggregation="toolbar">
 			<div data-sap-ui-type="sap.ui.commons.Toolbar">
 				<div data-sap-ui-aggregation="items">
-					<div data-sap-ui-type="sap.ui.commons.Button"></div>
+					<div data-sap-ui-type="sap.ui.commons.Button" data-text="Bind" data-press="onBind"></div>
+					<div data-sap-ui-type="sap.ui.commons.Button" data-text="Unbind" data-press="onUnBind"></div>
 				</div>
 			</div>
+		</div>
+	</div>
+	
+	<div data-sap-ui-type="com.twitter.bootstrap.controls.SubHeading" data-icon="glyphicon glyphicon-list" data-header-text="Service Content" data-sub-text="Sub text: Description?">
+		<div data-sap-ui-type="com.twitter.bootstrap.controls.Paragraph" data-text="Bind">
+			<div data-sap-ui-type="de.blue_danube_it.utils5.prettify.PrettyPrint" data-source="{pretty>/onBind}"></div>	
+	   	</div>
+    	<div data-sap-ui-type="com.twitter.bootstrap.controls.Paragraph" data-text="Unbind">
+			<div data-sap-ui-type="de.blue_danube_it.utils5.prettify.PrettyPrint" data-source="{pretty>/onUnBind}"></div>	
 		</div>
 	</div>
 </div>
