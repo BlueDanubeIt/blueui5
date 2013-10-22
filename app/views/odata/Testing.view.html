@@ -2,7 +2,6 @@
 	data-controller-name="de.blue_danube_it.blueui5.controllers.odata.Testing">
 
 
-
 <div id="odata-testing_listBox"
 	data-sap-ui-type="sap.ui.commons.ListBox"
 	data-items="{schema1>/entityContainer/0/entitySet}">
@@ -11,18 +10,17 @@
 			data-key="{schema1>entityType}"></div>
 	</div>
 </div>
- 
 
 
-<div data-sap-ui-type="com.twitter.bootstrap.controls.Container">
-	<div data-sap-ui-type="com.twitter.bootstrap.controls.PageHeader" data-header-text="OData" data-sub-text="Using filter in oData!"></div>
-	<div data-sap-ui-type="com.twitter.bootstrap.controls.Lead" data-text="Lead text.!"></div>
+<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.Container">
+	<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.PageHeader" data-header-text="OData" data-sub-text="Using filter in oData!"></div>
+	<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.Lead" data-text="Lead text.!"></div>
 
-	<div data-sap-ui-type="com.twitter.bootstrap.controls.SubHeading" data-icon="glyphicon glyphicon-list" data-header-text="Service Metadata" data-sub-text="Sub text: Description?">
-    	<div data-sap-ui-type="com.twitter.bootstrap.controls.Paragraph" data-text="How to bind Meta">
+	<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.SubHeading" data-icon="glyphicon glyphicon-list" data-header-text="Service Metadata" data-sub-text="Sub text: Description?">
+    	<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.Paragraph" data-text="How to bind Meta">
 			<div data-sap-ui-type="de.blue_danube_it.utils5.prettify.PrettyPrint" data-source="{pretty>/onInit}"></div>	
 		</div>
-		<div data-sap-ui-type="com.twitter.bootstrap.controls.Paragraph" data-text="View Metadata List Box setup">
+		<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.Paragraph" data-text="View Metadata List Box setup">
 			<div data-sap-ui-type="de.blue_danube_it.utils5.prettify.PrettyPrint">
 			
 				<div>
@@ -42,7 +40,7 @@
 				</div>
 			</div>	
 		</div>
-		<div data-sap-ui-type="com.twitter.bootstrap.controls.Paragraph" data-text="View Metadata associate list box to Drop down box.">
+		<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.Paragraph" data-text="View Metadata associate list box to Drop down box.">
 			<div data-sap-ui-type="de.blue_danube_it.utils5.prettify.PrettyPrint">
 			
 				<div>
@@ -60,13 +58,13 @@
 		</div>
 	</div>
 
-	<div data-sap-ui-type="com.twitter.bootstrap.controls.Row">
-		<div data-sap-ui-type="com.twitter.bootstrap.controls.Col" data-col-count="2" data-device-type="md">
+	<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.Row">
+		<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.Col" data-col-count="2" data-device-type="md">
 			<div data-sap-ui-type="sap.ui.commons.Label" data-text="Select entity type:" id="odata-dropdown_box_entity_type_Label" data-label-for="odata-dropdown_box_entity_type"></div>
 			<div data-sap-ui-type="sap.ui.commons.DropdownBox"
 				data-list-box="odata-testing_listBox" id="odata-dropdown_box_entity_type"></div>
 		</div>
-		<div data-sap-ui-type="com.twitter.bootstrap.controls.Col" data-col-count="2" data-device-type="md">
+		<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.Col" data-col-count="2" data-device-type="md">
 			<div data-sap-ui-type="sap.ui.commons.Label" data-text="Limit:" id="odata-limit_label" data-label-for="odata-limit_text_field"></div>
 			<div id="odata-limit_text_field" data-sap-ui-type="sap.ui.commons.TextField" data-value="10" data-aria-labelled-by="odata-limit_label"></div>
 		</div>
@@ -98,11 +96,11 @@
 		</div>
 	</div>
 	
-	<div data-sap-ui-type="com.twitter.bootstrap.controls.SubHeading" data-icon="glyphicon glyphicon-list" data-header-text="Service Content" data-sub-text="Sub text: Description?">
-		<div data-sap-ui-type="com.twitter.bootstrap.controls.Paragraph" data-text="Bind">
+	<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.SubHeading" data-icon="glyphicon glyphicon-list" data-header-text="Service Content" data-sub-text="Sub text: Description?">
+		<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.Paragraph" data-text="Bind">
 			<div data-sap-ui-type="de.blue_danube_it.utils5.prettify.PrettyPrint" data-source="{pretty>/onBind}"></div>	
 	   	</div>
-    	<div data-sap-ui-type="com.twitter.bootstrap.controls.Paragraph" data-text="Unbind">
+    	<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.Paragraph" data-text="Unbind">
 			<div data-sap-ui-type="de.blue_danube_it.utils5.prettify.PrettyPrint" data-source="{pretty>/onUnBind}"></div>	
 		</div>
 	</div>

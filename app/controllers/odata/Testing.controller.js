@@ -47,7 +47,10 @@ onInit : function() {
 	} catch (oException) {
 	}
 
-	this.setUpPretyContent();
+	this.setUpPrettyContent();
+	
+	var listBox= this.byId('odata-testing_listBox');
+	console.log(listBox);
 },
 onBind : function() {
 	if (!this.checkConnection()) return;
@@ -71,7 +74,7 @@ checkConnection:function(){
 	return this.success;
 },
 
-setUpPretyContent : function() {
+setUpPrettyContent : function() {
 	var oContentModel = new sap.ui.model.json.JSONModel(
 			this);
 	this.getView().setModel(oContentModel, 'pretty');

@@ -1,0 +1,67 @@
+<template data-controller-name="de.blue_danube_it.blueui5.controllers.Topic">
+<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.Container">
+	<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.PageHeader" data-header-text="Links & Buttons"></div>
+	<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.Lead" data-text="How to create links and buttons with BootstrapUI5."></div>
+	
+	<!-- Simple Link -->
+    <div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.SubHeading" data-header-text="Simple Link">
+    	<span>Just a simple </span>
+    	<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.Link" data-text="link" data-link-href="http://blue-danube-it.de">
+		</div>
+    </div>
+    <div data-sap-ui-type="de.blue_danube_it.utils5.prettify.PrettyPrint">
+    		<div>
+&lt;div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.Link" data-text="a link to an url" data-link-href="http://blue-danube-it.de">
+&lt;/div>
+    		</div>
+    </div>
+    <!-- END Simple Link -->
+    
+    <!-- Simple Button -->
+    <div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.SubHeading" data-header-text="Simple Button">
+    	<span>Just a simple </span>
+    	<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.Link" data-text="Button" data-use-button="true" data-button-class="default" data-link-href="http://blue-danube-it.de">
+		</div>
+    </div>
+    <div data-sap-ui-type="de.blue_danube_it.utils5.prettify.PrettyPrint">
+    		<div>
+&lt;div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.Link" data-text="a button to an url" data-use-button="true" data-button-class="default" data-link-href="http://blue-danube-it.de">
+&lt;/div>
+    		</div>
+    </div>
+    <!-- END Simple Button -->
+    
+    <!-- DangerButton -->
+    <div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.SubHeading" data-header-text="Danger &amp;lt;button&amp;gt;">
+    	<span>Danger </span>
+    	<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.Link" data-text="Button" data-use-button="true" data-use-button-tag="true" data-button-class="danger">
+		</div>
+		<span> using &lt;button&gt; tag</span>
+    </div>
+    <div data-sap-ui-type="de.blue_danube_it.utils5.prettify.PrettyPrint">
+    		<div>
+&lt;div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.Link" data-text="a button to an url" data-use-button="true" data-use-button-tag="true" data-button-class="danger">
+&lt;/div>
+    		</div>
+    </div>
+    <!-- END Danger Button -->
+    
+    <!-- Primary Button to view -->
+    <div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.SubHeading" data-header-text="Primary Button to view">
+    	<span>This </span>
+    	<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.Link" data-text="Button" data-use-button="true" data-use-button-tag="true" data-button-class="primary" data-view-name="de.blue_danube_it.blueui5.views.odata.Testing" data-view-type="HTML" data-view-id="odata-odata_in_ui5_test" data-clicked="de.blue_danube_it.blueui5._static.onLinkClicked">
+		</div>
+    	<span> opens a view</span>
+    </div>
+    <div data-sap-ui-type="de.blue_danube_it.utils5.prettify.PrettyPrint">
+    		<div>
+&lt;div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.Link" data-text="a button to an url" data-use-button="true" data-use-button-tag="true" data-button-class="primary" data-view-name="de.blue_danube_it.blueui5.views.odata.Testing" data-view-type="HTML" data-view-id="odata-odata_in_ui5_test" data-clicked="de.blue_danube_it.blueui5._static.onLinkClicked">
+&lt;/div>
+    		</div>
+    </div>
+    <!-- END Primary button to view -->
+    
+  </div>  
+</template>
+
+

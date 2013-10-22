@@ -12,7 +12,7 @@
  */
 
 jQuery.sap.declare("de.blue_danube_it.blueui5.App");
-jQuery.sap.require("com.twitter.bootstrap.controls.NavBar");
+jQuery.sap.require("de.pksoftware.bootstrapui5.controls.NavBar");
 
 sap.ui.base.ManagedObject.extend("de.blue_danube_it.blueui5.App", {
 	metadata : {
@@ -34,19 +34,15 @@ de.blue_danube_it.blueui5.App.prototype.init = function(){
 	jQuery.sap.registerModulePath("de.blue_danube_it.utils5", "./lib/utils5");
 	
 	//Include Bootstrap Css
+	jQuery.sap.registerModulePath("com.twitter.bootstrap", "./lib/bootstrap-3.0");
 	var bootstrapLibrary = jQuery.sap.getModulePath("com.twitter.bootstrap");
 	jQuery.sap.includeStyleSheet(bootstrapLibrary + "/css/bootstrap.min.css", "bootstrap-min-css");
 	
-	//Header
-	//var header = new sap.ui.commons.ApplicationHeader({logoSrc : "http://www.blue-danube-it.de/templates/blue-danube-it/logo.png"});
-	var header = new com.twitter.bootstrap.controls.NavBar({brand : "Blue Danube IT"});
-	header.placeAt('doc-header');
-	
 	//Require pks5application
-	jQuery.sap.require("de.pksoftware.pks5.PKS5SplitterApplication");
+	jQuery.sap.require("de.pksoftware.pks5.BootstrapUi5App");
 	
 	//Create a new PKS5Application
-	var pks5 = new de.pksoftware.pks5.PKS5SplitterApplication({
+	var pks5 = new de.pksoftware.pks5.BootstrapUi5App({
         root : "doc-content"
     });
 	
@@ -69,11 +65,22 @@ de.blue_danube_it.blueui5.App.prototype.init = function(){
 	sap.ui.getCore().getEventBus().publish("nav", "to", {id : "blueui5-home-master",
 					viewName : "de.blue_danube_it.blueui5.views.HomeMaster",
 					type : sap.ui.core.mvc.ViewType.HTML,
-					target : 'Master'});
+					target : 'Master',
+					writeHistory : true});
 	
 	//Navigate to Home Detail View
 	sap.ui.getCore().getEventBus().publish("nav", "to", {id : "blueui5-home-detail",
 		viewName : "de.blue_danube_it.blueui5.views.Home",
 		type : sap.ui.core.mvc.ViewType.HTML,
-		target : 'Detail'});
+		target : 'Detail',
+		writeHistory : true});
+	
+	//Navigate to Home Detail View
+	sap.ui.getCore().getEventBus().publish("nav", "to", {id : "blueui5-header",
+		viewName : "de.blue_danube_it.blueui5.views.Header",
+		type : sap.ui.core.mvc.ViewType.HTML,
+		target : 'Header',
+		writeHistory : true});
 };
+
+de.blue_danube_it.blueui5._static = {};
