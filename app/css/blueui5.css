@@ -9,3 +9,14 @@ html, body{
 #doc-content{
 	hseight:90%;
 }
+
+.sandbox{
+	line-height: 50%;
+    position: absolute;
+    top: 49px;
+}
+
+.sandbox div a{
+	font-size: 5px;
+	background-color: #FFFFFF;
+}

@@ -81,6 +81,12 @@ de.blue_danube_it.blueui5.App.prototype.init = function(){
 		type : sap.ui.core.mvc.ViewType.HTML,
 		target : 'Header',
 		writeHistory : true});
+	
+	sap.ui.getCore().getEventBus().publish("nav", "to", {id : "blueui5-sandbox",
+		viewName : "de.blue_danube_it.blueui5.views.Sandbox",
+		type : sap.ui.core.mvc.ViewType.HTML,
+		target : 'Sandbox',
+		writeHistory : true});
 };
 
 de.blue_danube_it.blueui5._static = {};
