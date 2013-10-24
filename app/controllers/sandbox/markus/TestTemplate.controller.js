@@ -6,7 +6,8 @@ sap.ui.controller("de.blue_danube_it.blueui5.controllers.sandbox.markus.TestTemp
 * @memberOf app.views.sandbox.markus.TestTemplate
 */
 	onInit: function() {
-		this.setUpPrettyContent();
+		this._setUpNavigationCotent();
+		this._setUpPrettyContent();
 	},
 
 /**
@@ -34,14 +35,18 @@ sap.ui.controller("de.blue_danube_it.blueui5.controllers.sandbox.markus.TestTemp
 //	onExit: function() {
 //
 //	}
-	setUpPrettyContent : function() {
+	_setUpPrettyContent : function() {
 		var oContentModel = new sap.ui.model.json.JSONModel(
 				this);
 		this.getView().setModel(oContentModel, 'pretty');
 		// oContentModel.loadData(this);
 		// debugger;
 	},
-
+	_setUpNavigationCotent: function(){
+		var jsonModel = new sap.ui.model.json.JSONModel();
+		jsonModel.loadData(jQuery.sap.getModulePath("de.blue_danube_it.blueui5") + "/model/sandbox/markus/TestingNavigation.json", {}, false);
+		this.getView().setModel(jsonModel, "navigation");
+	},
 
 onBind : function(oEvent) {
 	if (!this.checkConnection()) return;

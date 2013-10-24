@@ -2,7 +2,8 @@
 	data-controller-name="de.blue_danube_it.blueui5.controllers.sandbox.markus.TestTemplate">
 <div data-sap-ui-type="app.controls.templates.Common"
 	data-header="My TEST" data-header-sub="MY TEST SUB"
-	data-lead-text="Some not realy long text!">
+	data-lead-text="Some not realy long text!"
+	data-navigations="{navigation>/items}">
 	
 	<!-- Demos Content -->
 	<div data-sap-ui-aggregation="demos">
@@ -44,6 +45,19 @@
 					data-source="{pretty>/onUnBind}"></div>
 			</div>
 		</div>
+	</div>
+	
+	
+	<!-- Navigations Content -->
+	<div data-sap-ui-aggregation="navigations">
+		<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.Link" 
+		data-text="{navigation>text}" 
+		data-view-id="{navigation>viewId}"
+		data-view-name="{navigation>viewName}"
+		data-view-type="{navigation>viewType}"
+		data-clicked="de.blue_danube_it.blueui5._static.onLinkClicked"
+		>
+   		</div>
 	</div>
 </div>
 </template>

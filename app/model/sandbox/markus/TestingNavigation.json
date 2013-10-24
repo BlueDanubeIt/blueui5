@@ -1,0 +1,32 @@
+{
+	"items" : [
+		{
+			"text" : "Link 1",
+			"viewType" : "HTML",
+			"viewName" : "de.blue_danube_it.blueui5.views.sandbox.markus.Navigation",
+			"viewId" : "sandbox-markus-navigation",
+			"clicked" : "de.blue_danube_it.blueui5._static.onLinkClicked"
+		},
+		{
+			"text" : "Link 2",
+			"viewType" : "HTML",
+			"viewName" : "de.blue_danube_it.blueui5.views.sandbox.markus.Navigation",
+			"viewId" : "sandbox-markus-navigation",
+			"clicked" : "de.blue_danube_it.blueui5._static.onLinkClicked"
+		},
+		{
+			"text" : "Link 3",
+			"viewType" : "HTML",
+			"viewName" : "de.blue_danube_it.blueui5.views.sandbox.markus.Navigation",
+			"viewId" : "sandbox-markus-navigation",
+			"clicked" : "de.blue_danube_it.blueui5._static.onLinkClicked"
+		},
+		{
+			"text" : "Link 4",
+			"viewType" : "HTML",
+			"viewName" : "de.blue_danube_it.blueui5.views.sandbox.markus.Navigation",
+			"viewId" : "sandbox-markus-navigation",
+			"clicked" : "de.blue_danube_it.blueui5._static.onLinkClicked"
+		}
+	]
+}
