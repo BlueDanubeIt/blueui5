@@ -7,17 +7,8 @@
             "id": "getting_started",
             "text": "Getting started with SAPUI5",
             "expanded": false,
+            "hasExpander": true,
             "nodes": [
-                {
-                    "id": "getting_started-introduction",
-                    "text": "Introduction",
-                    "icon": "https://sapui5.netweaver.ondemand.com/sdk/test-resources/sap/ui/commons/demokit/images/system.gif",
-                	"hasExpander" : false,
-                	"expanded" : false,
-                	"ViewType" : "HTML",
-      				"ViewName" : "de.blue_danube_it.blueui5.views.getting_started.Introduction"
-      				
-                },
                 {
                     "id": "getting_started-hello_world",
                     "text": "Hello World",
@@ -27,43 +18,12 @@
             ]
         },
         {
-            "id": "ui_commons",
-            "text": "UI Commons",
-            "isSelected": true,
-            "selectable": true,
-            "hasExpander": true,
-            "nodes" : [
-            	{
-            		"text" : "Label",
-            		"id" : "ui_commons-label",
-            		"ViewType" : "HTML",
-      				"ViewName" : "de.blue_danube_it.blueui5.views.ui_commons.Label"
-        		}
-        	]
-        },
-        {
-            "id": "mobile",
-            "text": "Mobile",
-            "isSelected": true,
-            "selectable": true,
-            "hasExpander": true,
-            "nodes" : [
-            	{
-            		"text" : "Label",
-            		"id" : "mobile-label",
-            		"ViewType" : "HTML",
-      				"ViewName" : "de.blue_danube_it.blueui5.views.mobile.Label"
-        		}
-        	]
-        },
-        {
             "id": "bootstrapui5",
             "text": "BootstrapUI5",
-            "isSelected": true,
-            "selectable": true,
+            "expanded": false,
             "hasExpander": true,
             "nodes" : [
-            {
+            	{
             		"text" : "Overview",
             		"id" : "bootstrapui5-overview",
             		"ViewType" : "HTML",
@@ -76,129 +36,6 @@
       				"ViewName" : "de.blue_danube_it.blueui5.views.bootstrap.LinksButtons"
         		}
         	]
-        },
-         {
-            "id": "utils5",
-            "text": "Utils5",
-            "isSelected": true,
-            "selectable": true,
-            "hasExpander": true,
-            "nodes" : [
-            	{
-            		"text" : "Pretty Print",
-            		"id" : "utils5-pretty_print",
-            		"ViewType" : "HTML",
-      				"ViewName" : "de.blue_danube_it.blueui5.views.utils5.PrettyPrint"
-        		}
-        	]
-        },
-        {
-            "id": "mvc",
-            "text": "Model-Controller-View (MVC)",
-            "isSelected": true,
-            "selectable": true,
-            "hasExpander": true,
-            "nodes" : [
-            	{
-            		"text" : "MVC in SAPUI5",
-            		"id" : "mvc-mvc_in_ui5",
-            		"ViewType" : "HTML",
-      				"ViewName" : "de.blue_danube_it.blueui5.views.mvc.MvcUi5"
-        		}
-        	]
-        },
-        {
-            "id": "data_binding",
-            "text": "Data Binding",
-            "isSelected": true,
-            "selectable": true,
-            "hasExpander": true
-        },
-        {
-            "id": "localization",
-            "text": "Localization",
-            "isSelected": true,
-            "selectable": true,
-            "hasExpander": true
-        },
-        {
-            "id": "navigation",
-            "text": "Navigation",
-            "isSelected": true,
-            "selectable": true,
-            "hasExpander": true
-        },
-        {
-            "id": "custom_controls",
-            "text": "Custom Controls",
-            "isSelected": true,
-            "selectable": true,
-            "hasExpander": true
-        },
-        {
-            "id": "odata",
-            "text": "Odata",
-            "expanded": true,
-            "nodes": [
-                {
-                    "text": "oData in SAPUI5",
-                    "id": "odata-odata_in_ui5_display",
-                    "hasExpander" : false,
-                    "ViewType": "XML",
-                    "ViewName": "de.blue_danube_it.blueui5.views.odata.Display"
-                },
-                {
-                    "text": "oData Filter",
-                    "id": "odata-odata_in_ui5_filter",
-                    "hasExpander" : false,
-                    "ViewType": "XML",
-                    "ViewName": "de.blue_danube_it.blueui5.views.odata.Filter"
-                },
-                {
-                    "text": "oData Placeholder",
-                    "id": "odata-odata_in_ui5_placeholder",
-                    "hasExpander" : false,
-                    "ViewType": "XML",
-                    "ViewName": "de.blue_danube_it.blueui5.views.odata.Display"
-                    
-                },
-                {
-                    "text": "oData Test",
-                    "id": "odata-odata_in_ui5_test",
-                    "hasExpander" : false,
-                    "ViewType": "HTML",
-                    "ViewName": "de.blue_danube_it.blueui5.views.odata.Testing"
-                    
-                }
-            ]
-        },
-        {
-            "id": "sven",
-            "text": "Sven",
-            "expanded": true,
-            "nodes": [
-                {
-                    "text": "Meine kleine Welt",
-                    "id": "sven-meine_kleine_welt",
-                    "hasExpander" : false,
-                    "ViewType": "HTML",
-                    "ViewName": "de.blue_danube_it.blueui5.views.sven.MyView"
-                }
-            ]
-        },
-        {
-            "id": "marius",
-            "text": "Marius",
-            "expanded": true,
-            "nodes": [
-                {
-                    "text": "Meine kleine Welt",
-                    "id": "marius-meine_kleine_welt",
-                    "hasExpander" : false,
-                    "ViewType": "HTML",
-                    "ViewName": "de.blue_danube_it.blueui5.views.marius.MyView"
-                }
-            ]
         }
     ]
 }

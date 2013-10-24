@@ -33,6 +33,8 @@ de.blue_danube_it.blueui5.App.prototype.init = function(){
 	//Tell SAPUI5 where to find utils5
 	jQuery.sap.registerModulePath("de.blue_danube_it.utils5", "./lib/utils5");
 	
+	jQuery.sap.registerModulePath("app.controls", "./app/controls");
+	
 	//Include Bootstrap Css
 	jQuery.sap.registerModulePath("com.twitter.bootstrap", "./lib/bootstrap-3.0");
 	var bootstrapLibrary = jQuery.sap.getModulePath("com.twitter.bootstrap");

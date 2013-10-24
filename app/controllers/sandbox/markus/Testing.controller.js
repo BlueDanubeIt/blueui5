@@ -3,7 +3,7 @@
  * @version 2013-10-22
  * 
  */
-sap.ui.controller("de.blue_danube_it.blueui5.controllers.sandbox.odata.Testing", {					
+sap.ui.controller("de.blue_danube_it.blueui5.controllers.sandbox.markus.Testing", {					
 //Connection success flag.
 success : false,
 // Reverse proxy setup to
