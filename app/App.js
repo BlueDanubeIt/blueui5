@@ -19,6 +19,9 @@ sap.ui.base.ManagedObject.extend("de.blue_danube_it.blueui5.App", {
 		publicMethods : [],
 		
 		properties : {}
+	},
+	lala : function(){
+		return "lala";
 	}
 });
 
@@ -91,4 +94,17 @@ de.blue_danube_it.blueui5.App.prototype.init = function(){
 		writeHistory : true});
 };
 
-de.blue_danube_it.blueui5._static = {};
+de.blue_danube_it.blueui5._static = {
+
+		modelifyController : function(oController){
+			var oContentModel = new sap.ui.model.json.JSONModel(oController);
+			oController.getView().setModel(oContentModel, 'pretty');
+		},
+
+		setControllerJsonModel : function(oController, modelPathFileName, nameSpace){
+			var jsonModel = new sap.ui.model.json.JSONModel();
+			jsonModel.loadData(jQuery.sap.getModulePath("de.blue_danube_it.blueui5") + modelPathFileName, {}, false);
+			oController.getView().setModel(jsonModel,nameSpace);
+		}
+
+};

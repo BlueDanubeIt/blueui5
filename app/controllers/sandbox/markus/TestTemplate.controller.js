@@ -1,15 +1,19 @@
 sap.ui.controller("de.blue_danube_it.blueui5.controllers.sandbox.markus.TestTemplate", {
 
-/**
-* Called when a controller is instantiated and its View controls (if available) are already created.
-* Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
-* @memberOf app.views.sandbox.markus.TestTemplate
-*/
+	/**
+	* Called when a controller is instantiated and its View controls (if available) are already created.
+	* Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
+	* @memberOf app.views.sandbox.markus.TestTemplate
+	*/
 	onInit: function() {
-		this._setUpNavigationCotent();
-		this._setUpPrettyContent();
+		this._initModels();
 	},
 
+	_initModels : function(){
+		var oStaticHelper = de.blue_danube_it.blueui5._static;
+		oStaticHelper.modelifyController(this);
+		oStaticHelper.setControllerJsonModel(this, "/model/sandbox/markus/TestingNavigation.json", "navigation");
+	},
 /**
 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
 * (NOT before the first rendering! onInit() is used for that one!).
@@ -35,19 +39,6 @@ sap.ui.controller("de.blue_danube_it.blueui5.controllers.sandbox.markus.TestTemp
 //	onExit: function() {
 //
 //	}
-	_setUpPrettyContent : function() {
-		var oContentModel = new sap.ui.model.json.JSONModel(
-				this);
-		this.getView().setModel(oContentModel, 'pretty');
-		// oContentModel.loadData(this);
-		// debugger;
-	},
-	_setUpNavigationCotent: function(){
-		var jsonModel = new sap.ui.model.json.JSONModel();
-		jsonModel.loadData(jQuery.sap.getModulePath("de.blue_danube_it.blueui5") + "/model/sandbox/markus/TestingNavigation.json", {}, false);
-		this.getView().setModel(jsonModel, "navigation");
-	},
-
 onBind : function(oEvent) {
 	if (!this.checkConnection()) return;
 	

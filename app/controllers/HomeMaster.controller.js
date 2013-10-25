@@ -70,7 +70,6 @@ sap.ui.controller("de.blue_danube_it.blueui5.controllers.HomeMaster", {
 //	}
 });
 
-
 de.blue_danube_it.blueui5._static.onLinkClicked = function (oEvent) {
 	var oSource = oEvent.getSource();
 	

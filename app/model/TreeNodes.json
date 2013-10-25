@@ -6,7 +6,7 @@
         {
             "id": "getting_started",
             "text": "Getting started with SAPUI5",
-            "expanded": false,
+            "expanded": true,
             "hasExpander": true,
             "nodes": [
                 {
