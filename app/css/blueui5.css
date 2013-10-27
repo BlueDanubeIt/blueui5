@@ -15,7 +15,8 @@ html, body{
     float:left;
 }
 
-.sandbox div a{
+.sandbox-link{
 	font-size: 5px;
 	background-color: #FFFFFF;
+	color: #ffffff !important;
 }
