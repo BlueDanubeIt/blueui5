@@ -30,9 +30,6 @@ sap.ui.base.ManagedObject.extend("de.blue_danube_it.blueui5.App", {
  * TODO Ensure its allowed to override init method
  */
 de.blue_danube_it.blueui5.App.prototype.init = function(){
-	//Tell SAPUI5 where to find pks5application
-	jQuery.sap.registerModulePath("de.pksoftware.pks5", "./lib/pks5");
-	
 	//Tell SAPUI5 where to find utils5
 	jQuery.sap.registerModulePath("de.blue_danube_it.utils5", "./lib/utils5");
 	
@@ -44,10 +41,10 @@ de.blue_danube_it.blueui5.App.prototype.init = function(){
 	jQuery.sap.includeStyleSheet(bootstrapLibrary + "/css/bootstrap.min.css", "bootstrap-min-css");
 	
 	//Require pks5application
-	jQuery.sap.require("de.pksoftware.pks5.BootstrapUi5App");
+	jQuery.sap.require("de.pksoftware.bootstrapui5.BootstrapUi5App");
 	
 	//Create a new PKS5Application
-	var pks5 = new de.pksoftware.pks5.BootstrapUi5App({
+	var pks5 = new de.pksoftware.bootstrapui5.BootstrapUi5App({
         root : "doc-content"
     });
 	
@@ -87,11 +84,7 @@ de.blue_danube_it.blueui5.App.prototype.init = function(){
 		target : 'Header',
 		writeHistory : true});
 	
-	sap.ui.getCore().getEventBus().publish("nav", "to", {id : "blueui5-sandbox",
-		viewName : "de.blue_danube_it.blueui5.views.Sandbox",
-		type : sap.ui.core.mvc.ViewType.HTML,
-		target : 'Sandbox',
-		writeHistory : true});
+	
 };
 
 de.blue_danube_it.blueui5._static = {
