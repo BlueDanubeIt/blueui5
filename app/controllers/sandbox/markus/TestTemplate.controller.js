@@ -67,7 +67,7 @@ onBind : function(oEvent) {
                     });
                 	break;
             }
-
+            
             table.addColumn(new sap.ui.table.Column({
                 label: new sap.ui.commons.Label({text: this.name}),
                 template: oControl
