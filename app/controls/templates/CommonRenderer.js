@@ -82,9 +82,7 @@ app.controls.templates.CommonRenderer = {
 		_fetchFormatedContainer: function(oControl){
 			this.oControlInstance = oControl;
 			var content = this.oControlInstance.getContent();
-//			debugger;
 			if(content){
-				this.oControlInstance.setContent(content);
 				return;
 			}
 			var aContent = Array();
@@ -99,19 +97,11 @@ app.controls.templates.CommonRenderer = {
 			this.oControlInstance.setContent(new de.pksoftware.bootstrapui5.controls.Container({
 				content : aContent
 			}));
-			
-//			return new sap.ui.commons.layout.VerticalLayout({
-//		        content: oControl.getDescriptions()
-//			});
-			
-//			// Container fill
-//			return ;
 		}
 };
 
 app.controls.templates.CommonRenderer.render = function(oRm,
 		oControl) {
-//	debugger;
 	oRm.write("<div");
 	oRm.writeControlData(oControl);
 	oRm.addClass("template-common");
@@ -119,7 +109,5 @@ app.controls.templates.CommonRenderer.render = function(oRm,
 	oRm.write(">");
 	this._fetchFormatedContainer(oControl);
 	oRm.renderControl(this.oControlInstance.getContent());
-//	oRm.renderControl(this._fetchFormatedContainer(oControl));
-//	oRm.renderControl(this._fetchFormatedContainer(oControl));
 	oRm.write("</div>");
 };
