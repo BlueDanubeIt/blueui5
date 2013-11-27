@@ -13,9 +13,52 @@ sap.ui.controller("de.blue_danube_it.blueui5.controllers.sandbox.markus.Navigati
 */
 	onInit: function() {
 		this.testJsonTable();
+//		this.testJsonTable1();
 //		this.testOdataTable();
+//		this.testSapTable();
 	},
 
+	testSapTable : function(){
+		var oStaticHelper = de.blue_danube_it.blueui5._static;
+		oStaticHelper.setControllerJsonModel(this, "/model/sandbox/markus/TestTable.json", "jsonResultSap");
+		var oControl = null;
+		var table = this.byId("sapTable");
+		oControl = new sap.ui.commons.TextView({
+			text : "{jsonResultSap>text}"
+		});
+		
+		table.addColumn(new sap.ui.table.Column({
+			label : new sap.ui.commons.Label({
+				text : "Text"
+			}),
+			template : oControl
+		}));
+		
+		oControl = new sap.ui.commons.TextView({
+			text : "{jsonResultSap>viewType}"
+		});
+		
+		table.addColumn(new sap.ui.table.Column({
+			label : new sap.ui.commons.Label({
+				text : "View Type"
+			}),
+			template : oControl
+		}));
+		
+		oControl = new sap.ui.commons.TextView({
+			text : "{jsonResultSap>viewId}"
+		});
+		
+		table.addColumn(new sap.ui.table.Column({
+			label : new sap.ui.commons.Label({
+				text : "View Id"
+			}),
+			template : oControl
+		}));
+		
+		table.bindRows("jsonResultSap>/items");
+	},
+	
 	testOdataTable : function(){
 		try {
 			// Set up connection.
@@ -25,17 +68,16 @@ sap.ui.controller("de.blue_danube_it.blueui5.controllers.sandbox.markus.Navigati
 				
 				this.getView().setModel(oModel, "odataResult");
 				this.success = true;
-				var table = this.byId("boTable");
+				var table = this.byId("boTable3");
 				oControl = new sap.ui.commons.TextView({
 					text : "{odataResult>CustomerID}"
 				});
 				table.addColumn(new de.pksoftware.bootstrapui5.controls.table.Col({
 //				table.addColumn(new sap.ui.table.Column({
-//					label : new sap.ui.commons.Label({
-//						text : "Customer Id"
-//					}),
-					template : oControl,
-					header : "Customer Id"
+					header : new sap.ui.commons.Label({
+						text : "Customer Id"
+					}),
+					template : oControl
 				}));
 				
 				table.bindRows("odataResult>/Customers");
@@ -46,39 +88,86 @@ sap.ui.controller("de.blue_danube_it.blueui5.controllers.sandbox.markus.Navigati
 		}
 	},
 	
+	testJsonTable1 : function(){
+		var oStaticHelper = de.blue_danube_it.blueui5._static;
+		oStaticHelper.setControllerJsonModel(this, "/model/sandbox/markus/TestTable.json", "jsonResult");
+		var oControl = null;
+		var table = this.byId("boTable1");
+		oControl = new sap.ui.commons.TextView({
+			text : "{jsonResult>text}"
+		});
+		
+		table.addColumn(new de.pksoftware.bootstrapui5.controls.table.Col({
+			header : new sap.ui.commons.Label({
+				text : "Text"
+			}),
+			template : oControl
+		}));
+		
+		oControl = new sap.ui.commons.TextView({
+			text : "{jsonResult>viewType}"
+		});
+		
+		table.addColumn(new de.pksoftware.bootstrapui5.controls.table.Col({
+			header : new sap.ui.commons.Label({
+				text : "View Type"
+			}),
+			template : oControl
+		}));
+		
+		oControl = new sap.ui.commons.TextView({
+			text : "{jsonResult>viewId}"
+		});
+		
+		table.addColumn(new de.pksoftware.bootstrapui5.controls.table.Col({
+			header : new sap.ui.commons.Label({
+				text : "View Id"
+			}),
+			template : oControl
+		}));
+		
+		table.bindRows("jsonResult>/items");
+	},
+	
 	testJsonTable : function(){
 		var oStaticHelper = de.blue_danube_it.blueui5._static;
-		oStaticHelper.setControllerJsonModel(this, "/model/sandbox/markus/TestTable.json", "odataResult");
+		oStaticHelper.setControllerJsonModel(this, "/model/sandbox/markus/TestTable.json", "jsonResult2");
 		var oControl = null;
-		var table = this.byId("boTable");
+		var table = this.byId("boTable2");
 		oControl = new sap.ui.commons.TextView({
-			text : "{odataResult>text}"
+			text : "{jsonResult2>text}"
 		});
 		
 		table.addColumn(new de.pksoftware.bootstrapui5.controls.table.Col({
-			template : oControl,
-			header : "Text"
+			header : new sap.ui.commons.Label({
+				text : "Text"
+			}),
+			template : oControl
 		}));
 		
 		oControl = new sap.ui.commons.TextView({
-			text : "{odataResult>viewType}"
+			text : "{jsonResult2>viewType}"
 		});
 		
 		table.addColumn(new de.pksoftware.bootstrapui5.controls.table.Col({
-			template : oControl,
-			header : "View Type"
+			header : new sap.ui.commons.Label({
+				text : "View Type"
+			}),
+			template : oControl
 		}));
 		
 		oControl = new sap.ui.commons.TextView({
-			text : "{odataResult>viewId}"
+			text : "{jsonResult2>viewId}"
 		});
 		
 		table.addColumn(new de.pksoftware.bootstrapui5.controls.table.Col({
-			template : oControl,
-			header : "View Id"
+			header : new sap.ui.commons.Label({
+				text : "View Id"
+			}),
+			template : oControl
 		}));
 		
-		table.bindRows("odataResult>/items");
+		table.bindRows("jsonResult2>/items");
 	},
 	
 //	_initModels : function(){
