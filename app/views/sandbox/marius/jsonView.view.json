@@ -1,0 +1,48 @@
+{ 
+   "Type":"sap.ui.core.mvc.JSONView",
+   "controllerName":"de.blue_danube_it.blueui5.controllers.sandbox.marius.MyView",
+   "content": [{
+      "Type":"de.pksoftware.bootstrapui5.controls.PageHeader",
+      "header-text":"This is a JSON view",
+      "sub-text": "Just a view based on a JSON view"
+   },
+   {
+   	  "Type": "de.pksoftware.bootstrapui5.controls.SubHeading",
+   	  "header-text": "Hello World!"
+   },
+   {
+      "Type":"sap.ui.commons.Carousel",
+      "width": "100%",
+      "orientation": "horizontal",
+      "content": [{
+      	{
+	      "Type":"sap.ui.commons.Button",
+	      "text":"Button No.1"
+	  	},
+      	{
+	      "Type":"sap.ui.commons.Button",
+	      "text":"Button No.2"
+	  	},
+      	{
+	      "Type":"sap.ui.commons.Button",
+	      "text":"Button No.3"
+	  	},
+      	{
+	      "Type":"sap.ui.commons.Button",
+	      "text":"Button No.4"
+	  	},
+      	{
+	      "Type":"sap.ui.commons.Button",
+	      "text":"Button No.5"
+	  	},
+      	{
+	      "Type":"sap.ui.commons.Button",
+	      "text":"Button No.6"
+	  	},
+      	{
+	      "Type":"sap.ui.commons.Button",
+	      "text":"Button No.7"
+	  	}]
+      }
+   }]
+}

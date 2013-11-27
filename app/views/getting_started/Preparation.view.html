@@ -1,0 +1,54 @@
+<template data-controller-name="de.blue_danube_it.blueui5.controllers.Topic">
+<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.Container">
+	<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.PageHeader" data-header-text="Preparation"></div>
+	<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.SubHeading" data-header-text="Let's prepare our SAP UI5 scripts."></div>
+	<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.Paragraph" data-text="At first we have to include the SAP UI5 library. There are two ways of doing this. The simplest is, to just get it from the SAP page:"></div>
+	<div data-sap-ui-type="de.blue_danube_it.utils5.prettify.PrettyPrint">
+    		<div>
+&lt;script id="sap-ui-bootstrap"
+    src="https://sapui5.netweaver.ondemand.com/resources/sap-ui-core.js"
+    data-sap-ui-theme="sap_goldreflection"
+    data-sap-ui-libs="sap.ui.commons">&lt;/script></div>
+    </div>
+    <p>If you want a local copy and documentation of SAP UI5, get 
+	<a href="http://www.sdn.sap.com/irj/sdn/go/portal/prtroot/docs/webcontent/uuid/c08465d5-b833-2f10-e59d-f67a5cb54d2f">the SAP UI Development Toolkit</a>.</p>
+	<p>The Development Toolkit includes the API references, a developer guide, testsuits and many other functions and will be your best friend while developing with SAP UI5. You can also 
+	<a href="https://sapui5.hana.ondemand.com/sdk/#content/Overview.html">look it up online</a>.</p>
+	<p>However, to include SAP UI5 localy, you need to copy the "resources" folder to your application and include the containing "sap-ui-core.js":</p>
+	<div data-sap-ui-type="de.blue_danube_it.utils5.prettify.PrettyPrint">
+    		<div>
+&lt;script id="sap-ui-bootstrap"
+    src="resources/sap-ui-core.js"
+    data-sap-ui-theme="sap_goldreflection"
+    data-sap-ui-libs="sap.ui.commons">&lt;/script></div>
+    </div>
+    <p>Looking at the codes above, you may notice that there are some parameters you normaly don't use when including any javascript libraries. With these parameters you select the libraries inside the UI you want to use and the theme to style your application. We will come to this later.</p>
+    <p>Technically, your code would already work. But to make it work propely you should add these two meta-Tags at the beginning of the &lt;head>:</p>
+    <div data-sap-ui-type="de.blue_danube_it.utils5.prettify.PrettyPrint"><div>
+&lt;meta http-equiv="X-UA-Compatible" content="IE=edge" />
+&lt;meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    </div></div>
+    <p>They will ensure that Internet Explorer 8+ uses its most-standards-compliant rendering mode and that all browsers are treating the file as UTF-8 encoded. Second, you should add the class "sapUiBody" to your body-Tag to make the themes work:</p>
+    <div data-sap-ui-type="de.blue_danube_it.utils5.prettify.PrettyPrint"><div>
+&lt;body class="sapUiBody">
+    </div></div>
+    <p>Everything kombined, your HTML should now look like this:</p>
+   <div data-sap-ui-type="de.blue_danube_it.utils5.prettify.PrettyPrint">
+<div>&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    &lt;meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    &lt;title>Hello World with SAPUI5&lt;/title>
+
+    &lt;script id="sap-ui-bootstrap"
+        src="https://sapui5.netweaver.ondemand.com/resources/sap-ui-core.js"
+        data-sap-ui-theme="sap_goldreflection"
+        data-sap-ui-libs="sap.ui.commons">&lt;/script>
+&lt;/head>
+&lt;body class="sapUiBody">
+&lt;/body>
+&lt;/html></div></div>
+<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.Link" data-text="Continue saying Hello World!" data-view-name="de.blue_danube_it.blueui5.views.getting_started.HelloWorld" data-view-type="HTML"></div>
+</div>
+</template>
