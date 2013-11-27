@@ -5,7 +5,7 @@
 
 		<!-- Odata testing -->
 		<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.SubHeading" data-header-text="Navigation to odata sand box">
-			<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.Link" data-text="Load odata sand box" data-use-button="true" data-use-button-tag="true" data-button-class="primary" data-view-name="de.blue_danube_it.blueui5.views.sandbox.markus.Testing" data-view-type="HTML" data-view-id="sandbox-markus-testing" data-clicked="de.blue_danube_it.blueui5._static.onLinkClicked">
+			<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.Link" data-text="Load odata sand box" data-use-button="true" data-use-button-tag="true" data-button-class="primary" data-view-name="de.blue_danube_it.blueui5.views.odata.Main" data-view-type="HTML" data-view-id="sandbox-markus-testing" data-clicked="de.blue_danube_it.blueui5._static.onLinkClicked">
 			</div>
 		</div>
 		<!-- Template Tests -->
@@ -18,6 +18,13 @@
 		<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.SubHeading" data-header-text="Test Buttons">
 			<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.Link" data-text="Load Buttons test" data-use-button="true" data-use-button-tag="true" data-button-class="primary" data-view-name="de.blue_danube_it.blueui5.views.ui_commons.button.DefaultSetup" data-view-type="HTML" data-view-id="ui_commons-default_setup" data-clicked="de.blue_danube_it.blueui5._static.onLinkClicked">
 			</div>
+		</div>
+	</div>
+	
+	<div data-sap-ui-type="sap.ui.commons.layout.VerticalLayout">
+		<div data-sap-ui-aggregation="content">
+			<div id="boTable" data-sap-ui-type="de.pksoftware.bootstrapui5.controls.table.Table"></div>
+<!-- 			<div id="boTable" data-sap-ui-type="sap.ui.table.Table"></div> -->
 		</div>
 	</div>
 </template>
