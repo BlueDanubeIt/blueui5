@@ -9,6 +9,12 @@
             "expanded": true,
             "hasExpander": true,
             "nodes": [
+            	{
+                    "id": "getting_started-preparation",
+                    "text": "Preparation",
+                	"ViewType" : "HTML",
+      				"ViewName" : "de.blue_danube_it.blueui5.views.getting_started.Preparation"
+                },
                 {
                     "id": "getting_started-hello_world",
                     "text": "Hello World",

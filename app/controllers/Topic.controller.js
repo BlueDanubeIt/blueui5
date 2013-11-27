@@ -15,6 +15,8 @@ sap.ui.controller("de.blue_danube_it.blueui5.controllers.Topic", {
 	
 	onInit : function () {
 		
+	},
+	shake: function() {
+		$('#getting_started-hello_world--hello-world').html('Hello Click!');
 	}
-
 });

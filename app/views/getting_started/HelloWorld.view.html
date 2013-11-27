@@ -1,0 +1,29 @@
+<template data-controller-name="de.blue_danube_it.blueui5.controllers.Topic">
+<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.Container">
+	<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.PageHeader" data-header-text="Hello World"></div>
+	<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.SubHeading" data-text="Let's start with the easiest of all examples."></div>
+	<p>We are going to place a button in order to say hello to the world now. There are three general steps to place an element with SAP UI5. The first one is to instantiate the class of the element we want to create. In this case we will pick a simple button:</p>
+	<div data-sap-ui-type="de.blue_danube_it.utils5.prettify.PrettyPrint"><div>
+var helloButton = new sap.ui.commons.Button('hello-button');</div></div>
+	<p>This would be just a blank button with the ID "hello-button", so let's go on to the second step and fill it with some content. The created class has plenty of methods to configurate the button, see the <a href="https://sapui5.hana.ondemand.com/sdk/#docs/api/symbols/sap.ui.commons.Button.html">API</a> for all of them. For our needs, it should say "Hello World" and "Hello Click!" if someone clicks it:</p>
+	<div data-sap-ui-type="de.blue_danube_it.utils5.prettify.PrettyPrint"><div>
+helloButton.setText('Hello World!');
+helloButton.attachPress(function() {
+	$('#hello-button').html('Hello Click!');
+});</div></div>
+	<p>The third step is to place the button anywhere we want it to be. We will add a simple div to the body-tag</p>
+	<div data-sap-ui-type="de.blue_danube_it.utils5.prettify.PrettyPrint"><div>
+&lt;div id="uiContent">&lt;/div></div></div>
+	<p>and place the button in it:</p>
+	<div data-sap-ui-type="de.blue_danube_it.utils5.prettify.PrettyPrint"><div>
+helloButton.placeAt('#uiContent');</div></div>
+	<p>Congratulations, you just build your first SAP UI5 element! Your result should look like this:</p>
+	 <div id="hello-world" data-sap-ui-type="sap.ui.commons.Button" data-text="Hello World!" data-press="shake"></div>
+	 <p>You can also simplify the code by combining these steps in just one method called on a jQuery object. The method sapui() is expecting a classname to instantiate, an ID and an array of parameters. Our example would look like this:</p>
+	 <div data-sap-ui-type="de.blue_danube_it.utils5.prettify.PrettyPrint"><div>
+ $("#uiContent").sapui("Button", "hello-button", {
+    text: "Hello World!", 
+	press: function(){$("#hello-world").html('Hello Click!');}
+});</div></div>
+</div>
+</template>

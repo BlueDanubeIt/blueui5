@@ -1,14 +1,30 @@
-<template data-controller-name="de.blue_danube_it.blueui5.controllers.sandbox.marius.MyView">
-<div data-sap-ui-type="sap.ui.commons.layout.HorizontalLayout">
-	<div data-sap-ui-aggregation="content">
-		<div data-sap-ui-type="sap.ui.commons.TextView" data-text="lala"></div>
-		<div data-sap-ui-type="sap.ui.commons.TextView" data-text="lala2"></div>
-		<div data-sap-ui-type="sap.ui.commons.layout.VerticalLayout">
-		<div data-sap-ui-aggregation="content">
-				<div data-sap-ui-type="sap.ui.commons.TextView" data-text="lala"></div>
-				<div data-sap-ui-type="sap.ui.commons.TextView" data-text="lala2"></div>
-			</div>
-		</div>
-	</div>
-</div>
-</template>
+<core:View 
+	xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="de.pksoftware.bootstrapui5.controls"
+	xmlns:sapui="sap.ui.commons"
+	controllerName="de.blue_danube_it.blueui5.controllers.sandbox.marius.MyView" 
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	
+	<PageHeader header-text="This is an XML view" sub-text="Just a page based on an xml template"></PageHeader>
+	<SubHeading header-text="Hello World"><html:p>This is an XML-View. Unfortunately, the bootstrap does not work in here.</html:p></SubHeading>
+	<sapui:Carousel height="22px">
+		<sapui:Button text="Button No.1" tooltip="Psst! I am a button! *giggedi*!" />
+		<sapui:Button text="Button No.2" tooltip="Psst! I am a button! *giggedi*!" />
+		<sapui:Button text="Button No.3" tooltip="Psst! I am a button! *giggedi*!" />
+		<sapui:Button text="Button No.4" tooltip="Psst! I am a button! *giggedi*!" />
+		<sapui:Button text="Button No.5" tooltip="Psst! I am a button! *giggedi*!" />
+		<sapui:Button text="Button No.6" tooltip="Psst! I am a button! *giggedi*!" />
+		<sapui:Button text="Button No.7" tooltip="Psst! I am a button! *giggedi*!" />
+	</sapui:Carousel>
+	<sapui:Button text="I'm a SAPUI-Button!" tooltip="Psst! I was created by the sap ui5 commons!" />
+	<html:button>Hello! I'm an HTML-Button!</html:button>
+	<Link text="Load XML view"
+			view-name="de.blue_danube_it.blueui5.views.sandbox.marius.xmlView"
+			view-type="XML"
+			clicked="de.blue_danube_it.blueui5._static.onLinkClicked"
+			use-button="true"
+			use-button-tag="true"
+			button-class="primary" />
+	
+</core:View>
