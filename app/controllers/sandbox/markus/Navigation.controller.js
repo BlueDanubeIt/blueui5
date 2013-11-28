@@ -12,7 +12,7 @@ sap.ui.controller("de.blue_danube_it.blueui5.controllers.sandbox.markus.Navigati
 * @memberOf app.views.sandbox.markus.Navigation
 */
 	onInit: function() {
-//		this.testJsonTable();
+		this.testJsonTable();
 //		this.testJsonTable1();
 		this.testOdataTable();
 //		this.testSapTable();
@@ -73,9 +73,28 @@ sap.ui.controller("de.blue_danube_it.blueui5.controllers.sandbox.markus.Navigati
 					text : "{odataResult>CustomerID}"
 				});
 				table.addColumn(new de.pksoftware.bootstrapui5.controls.table.Col({
-//				table.addColumn(new sap.ui.table.Column({
 					header : new sap.ui.commons.Label({
 						text : "Customer Id"
+					}),
+					template : oControl
+				}));
+				
+				oControl = new sap.ui.commons.TextView({
+					text : "{odataResult>CompanyName}"
+				});
+				table.addColumn(new de.pksoftware.bootstrapui5.controls.table.Col({
+					header : new sap.ui.commons.Label({
+						text : "Company Name"
+					}),
+					template : oControl
+				}));
+				
+				oControl = new sap.ui.commons.TextView({
+					text : "{odataResult>Country}"
+				});
+				table.addColumn(new de.pksoftware.bootstrapui5.controls.table.Col({
+					header : new sap.ui.commons.Label({
+						text : "Country"
 					}),
 					template : oControl
 				}));
