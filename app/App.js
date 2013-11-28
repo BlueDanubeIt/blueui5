@@ -40,6 +40,10 @@ de.blue_danube_it.blueui5.App.prototype.init = function(){
 	var bootstrapLibrary = jQuery.sap.getModulePath("com.twitter.bootstrap");
 	jQuery.sap.includeStyleSheet(bootstrapLibrary + "/css/bootstrap.min.css", "bootstrap-min-css");
 	
+	//Include jQuery Datatables
+	// Version 1.9.4 Need to check if jQuery 1.7.1 compatible.
+	jQuery.sap.registerModulePath("com.jquery.datatables", "./lib/jquery/datatables/1.9.4");
+	
 	//Require pks5application
 	jQuery.sap.require("de.pksoftware.bootstrapui5.BootstrapUi5App");
 	
@@ -62,6 +66,8 @@ de.blue_danube_it.blueui5.App.prototype.init = function(){
 	
 	
 	document.title = this._localization.getProperty("HTML_TITLE");
+	
+	sap.ui.getCore().applyTheme("sap_bluecrystal");
 	
 	//Navigate to Home Master View
 	sap.ui.getCore().getEventBus().publish("nav", "to", {id : "blueui5-home-master",
