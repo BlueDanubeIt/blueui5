@@ -1,0 +1,287 @@
+<core:View 
+	xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:bootstrap="de.pksoftware.bootstrapui5.controls"
+	xmlns="sap.ui.commons"
+	xmlns:pretty="de.blue_danube_it.utils5.prettify"
+	controllerName="de.blue_danube_it.blueui5.controllers.sandbox.marius.MyView" 
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	
+	<bootstrap:PageHeader headerText="Slider" subText="How to build a simple slider with SAPUI5" />
+	
+	<!-- NORMAL IMAGE SLIDER -->
+	<bootstrap:Paragraph text="The class Carousel gives us the ability to build simple sliders with a nice amount of configurations. The Carousel class will just take every of its child elements and put them in a row to make them slideable as seen in the example below:" />
+	<TabStrip>
+		
+		<!-- CODE RESULT-->
+		
+		<Tab text="Result">
+			<Carousel width="834px" height="169px">
+				<Image src="images/ui_commons/slider/Logo_BlueDanube.jpg" alt="Blue Danube Logo" width="780px" height="169px" />
+				<Image src="images/ui_commons/slider/Jellyfish.jpg" alt="Jellyfish" width="780px" height="169px" />
+				<Image src="images/ui_commons/slider/Chrysanthemum.jpg" alt="Chrysanthemum" width="780px" height="169px" />
+			</Carousel>
+		</Tab>
+		
+		<!-- JS CODE -->
+		
+		<Tab text="JS Code">
+			<pretty:PrettyPrint>
+<html:div>new sap.ui.commons.Carousel("slider", {
+	width: '834px',
+	height: '169px',
+	content: [
+		new sap.ui.commons.Image('blue-danube-logo', {
+			src: 'images/ui_commons/slider/Logo_BlueDanube.jpg',
+			width: '780px',
+			height: '169px',
+			alt: 'Blue Danube Logo'
+		}),
+		new sap.ui.commons.Image('jellyfish', {
+			src: 'images/ui_commons/slider/Jellyfish.jpg',
+			width: '780px',
+			height: '169px',
+			alt: 'Jellyfish'
+		}),
+		new sap.ui.commons.Image('chrysanthemum', {
+			src: 'images/ui_commons/slider/Chrysanthemum.jpg',
+			width: '780px',
+			height: '169px',
+			alt: 'Chrysanthemum'
+		})
+	]
+})</html:div>
+			</pretty:PrettyPrint>
+		</Tab>
+		
+		<!-- XML CODE -->
+		
+		<Tab text="XML Code">
+			<pretty:PrettyPrint>
+<html:div>&lt;Carousel width="834px" height="169px">
+	&lt;Image src="images/ui_commons/slider/Logo_BlueDanube.jpg" 
+	   	alt="Blue Danube Logo" 
+	   	width="780px" 
+	   	height="169px" />
+	&lt;Image src="images/ui_commons/slider/Jellyfish.jpg" 
+	   	alt="Jellyfish" 
+	   	width="780px" 
+	   	height="169px" />
+	&lt;Image src="images/ui_commons/slider/Chrysanthemum.jpg" 
+	   	alt="Chrysanthemum" 
+	   	width="780px" 
+	   	height="169px" />
+&lt;/Carousel></html:div>
+			</pretty:PrettyPrint>
+		</Tab>
+		
+		<!-- HTML CODE -->
+		
+		<Tab text="HTML Code">
+			
+			<pretty:PrettyPrint>
+<html:div>&lt;div data-sap-ui-type="sap.ui.commons.Carousel" data-width="834px" data-height="169px">
+	&lt;div data-sap-ui-type="sap.ui.commons.Image" data-src="images/ui_commons/slider/Logo_BlueDanube.jpg"
+		data-alt="Blue Danube Logo" 
+		data-width="780px" 
+		data-height="169px">&lt;/div>
+	&lt;div data-sap-ui-type="sap.ui.commons.Image" data-src="images/ui_commons/slider/Jellyfish.jpg"
+		data-alt="Jellyfish" 
+		data-width="780px" 
+		data-height="169px">&lt;/div>
+	&lt;div data-sap-ui-type="sap.ui.commons.Image" data-src="images/ui_commons/slider/Chrysanthemum.jpg"
+		data-alt="Chrysanthemum" 
+		data-width="780px" 
+		data-height="169px">&lt;/div>
+&lt;/div></html:div>
+			</pretty:PrettyPrint>
+		</Tab>
+		
+		<!-- JSON CODE -->
+		
+		<Tab text="JSON Code">
+			<pretty:PrettyPrint>
+<html:div>{
+  "Type": "sap.ui.commons.Carousel",
+  "width": "834px",
+  "height": "169px",
+  "content": [
+  	{
+  		"Type": "sap.ui.commons.Image",
+  		"src": "images/ui_commons/slider/Logo_BlueDanube.jpg",
+  		"width": "780px",
+  		"height": "169px",
+  		"alt": "Blue Danube Logo"
+  	},
+  	{
+  		"Type": "sap.ui.commons.Image",
+  		"src": "images/ui_commons/slider/Jellyfish.jpg",
+  		"width": "780px",
+  		"height": "169px",
+  		"alt": "Jellyfish"
+  	},
+  	{
+  		"Type": "sap.ui.commons.Image",
+  		"src": "images/ui_commons/slider/Chrysanthemum.jpg",
+  		"width": "780px",
+  		"height": "169px",
+  		"alt": "Chrysanthemum"
+  	}
+  ]
+}</html:div>
+			</pretty:PrettyPrint>
+		</Tab>
+	</TabStrip>
+	
+	<!-- SPLITTED IMAGE SLIDER -->
+	<bootstrap:Paragraph text="Of course you can slide other elements as well. The Carousel class is accepting nearly every content element of SAPUI5 as an aggregation. Plus, it will create the optimal fit for these elements: If the fourth element would be cut, it will show only three elements and strech their containers so they will fill the full width of the slider like in the example below:" />
+	<TabStrip>
+		
+		<!-- CODE RESULT-->
+		
+		<Tab text="Result">
+			<Carousel width="834px" height="169px">
+				<TextArea width="250px" height="169px" editable="false" value="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren"></TextArea>
+				<TextArea width="250px" height="169px" editable="false" value="Sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata"></TextArea>
+				<TextArea width="250px" height="169px" editable="false" value="Ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. "></TextArea>
+				<TextArea width="250px" height="169px" editable="false" value="magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd"></TextArea>
+			</Carousel>
+		</Tab>
+		
+		<!-- JS CODE -->
+		
+		<Tab text="JS Code">
+			<pretty:PrettyPrint>
+<html:div>new sap.ui.commons.Carousel("slider", {
+	width: '834px',
+	height: '169px',
+	content: [
+		new sap.ui.commons.TextArea('lorem1', {
+			width: '250px',
+			height: '169px',
+			editable: false,
+			value: "Lorem ipsum dolor sit amet [...]"
+		}),
+		new sap.ui.commons.TextArea('lorem2', {
+			width: '250px',
+			height: '169px',
+			editable: false,
+			value: "Sed diam voluptua. At vero eos et [...]"
+		}),
+		new sap.ui.commons.TextArea('lorem3', {
+			width: '250px',
+			height: '169px',
+			editable: false,
+			value: "Ipsum dolor sit amet. Lorem [...]"
+		}),
+		new sap.ui.commons.TextArea('lorem4', {
+			width: '250px',
+			height: '169px',
+			editable: false,
+			value: "magna aliquyam erat, sed [...]"
+		})
+	]
+})</html:div>
+			</pretty:PrettyPrint>
+		</Tab>
+		
+		<!-- XML CODE -->
+		
+		<Tab text="XML Code">
+			<pretty:PrettyPrint>
+<html:div>&lt;Carousel width="834px" height="169px">
+	&lt;TextArea width="250px" 
+			height="169px" 
+			editable="false" 
+			value="Lorem ipsum dolor sit amet [...]">&lt;/TextArea>
+	&lt;TextArea width="250px" 
+			height="169px" 
+			editable="false" 
+			value="Sed diam voluptua. At vero [...]">&lt;/TextArea>
+	&lt;TextArea width="250px" 
+			height="169px" 
+			editable="false" 
+			value="Ipsum dolor sit amet. [...]">&lt;/TextArea>
+	&lt;TextArea width="250px" 
+			height="169px" 
+			editable="false" 
+			value="magna aliquyam erat, sed [...]">&lt;/TextArea>
+&lt;/Carousel></html:div>
+			</pretty:PrettyPrint>
+		</Tab>
+		
+		<!-- HTML CODE -->
+		
+		<Tab text="HTML Code">
+			
+			<pretty:PrettyPrint>
+<html:div>&lt;div data-sap-ui-type="sap.ui.commons.Carousel" data-width="834px" data-height="169px">
+	&lt;div data-sap-ui-type="sap.ui.commons.TextArea" 
+			data-width="250px" 
+			data-height="169px" 
+			data-editable="false" 
+			data-value="Lorem ipsum dolor sit amet, [...]">&lt;/div>
+	&lt;div data-sap-ui-type="sap.ui.commons.TextArea" 
+			data-width="250px" 
+			data-height="169px" 
+			data-editable="false" 
+			data-value="Sed diam voluptua. At vero [...]">&lt;/div>
+	&lt;div data-sap-ui-type="sap.ui.commons.TextArea" 
+			data-width="250px" 
+			data-height="169px" 
+			data-editable="false" 
+			data-value="Ipsum dolor sit amet. [...]">&lt;/div>
+	&lt;div data-sap-ui-type="sap.ui.commons.TextArea" 
+			data-width="250px" 
+			data-height="169px" 
+			data-editable="false" 
+			data-value="magna aliquyam erat, sed [...]">&lt;/div>
+&lt;/div></html:div>
+			</pretty:PrettyPrint>
+		</Tab>
+		
+		<!-- JSON CODE -->
+		
+		<Tab text="JSON Code">
+			<pretty:PrettyPrint>
+<html:div>{
+  "Type": "sap.ui.commons.Carousel",
+  "width": "834px",
+  "height": "169px",
+  "content": [
+  	{
+  		"Type": "sap.ui.commons.TextArea",
+  		"width": "250px",
+  		"height": "169px",
+		"editable": false,
+		"value": "Lorem ipsum dolor sit amet, [...]"
+  	},
+  	{
+  		"Type": "sap.ui.commons.TextArea",
+  		"width": "250px",
+  		"height": "169px",
+		"editable": false,
+		"value": "Sed diam voluptua. At vero [...]"
+  	},
+  	{
+  		"Type": "sap.ui.commons.TextArea",
+  		"width": "250px",
+  		"height": "169px",
+		"editable": false,
+		"value": "Ipsum dolor sit amet. Lorem [...]"
+  	},
+  	{
+  		"Type": "sap.ui.commons.TextArea",
+  		"width": "250px",
+  		"height": "169px",
+		"editable": false,
+		"value": "magna aliquyam erat, sed [...]"
+  	}
+  ]
+}</html:div>
+			</pretty:PrettyPrint>
+		</Tab>
+	</TabStrip>
+	<html:p>If you need more configurations, check out the <html:a href="https://sapui5.hana.ondemand.com/sdk/#docs/api/symbols/sap.ui.commons.Carousel.html" target="_blank">API</html:a></html:p>
+	
+</core:View>

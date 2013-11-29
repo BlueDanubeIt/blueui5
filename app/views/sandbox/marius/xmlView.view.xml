@@ -6,7 +6,7 @@
 	controllerName="de.blue_danube_it.blueui5.controllers.sandbox.marius.MyView" 
 	xmlns:html="http://www.w3.org/1999/xhtml">
 	
-	<PageHeader header-text="This is an XML view" sub-text="Just a page based on an xml template"></PageHeader>
+	<PageHeader headerText="This is an XML view" subText="Just a page based on an xml template"></PageHeader>
 	<SubHeading header-text="Hello World"><html:p>This is an XML-View. Unfortunately, the bootstrap does not work in here.</html:p></SubHeading>
 	<sapui:Carousel height="22px">
 		<sapui:Button text="Button No.1" tooltip="Psst! I am a button! *giggedi*!" />

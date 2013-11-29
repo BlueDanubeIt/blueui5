@@ -24,6 +24,20 @@
             ]
         },
         {
+            "id": "ui_commons",
+            "text": "SAPUI5 commons library",
+            "expanded": true,
+            "hasExpander": true,
+            "nodes": [
+            	{
+                    "id": "ui_commons-slider",
+                    "text": "Slider",
+                	"ViewType" : "XML",
+      				"ViewName" : "de.blue_danube_it.blueui5.views.ui_commons.slider.DefaultSetup"
+                }
+            ]
+        },
+        {
             "id": "bootstrapui5",
             "text": "BootstrapUI5",
             "expanded": false,
