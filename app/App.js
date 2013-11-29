@@ -40,6 +40,10 @@ de.blue_danube_it.blueui5.App.prototype.init = function(){
 	var bootstrapLibrary = jQuery.sap.getModulePath("com.twitter.bootstrap");
 	jQuery.sap.includeStyleSheet(bootstrapLibrary + "/css/bootstrap.min.css", "bootstrap-min-css");
 	
+	//Include jQuery Datatables
+	// Version 1.9.4 Need to check if jQuery 1.7.1 compatible.
+	jQuery.sap.registerModulePath("com.jquery.datatables", "./lib/jquery/datatables/1.9.4");
+	
 	//Require pks5application
 	jQuery.sap.require("de.pksoftware.bootstrapui5.BootstrapUi5App");
 	
@@ -62,6 +66,8 @@ de.blue_danube_it.blueui5.App.prototype.init = function(){
 	
 	
 	document.title = this._localization.getProperty("HTML_TITLE");
+	
+	sap.ui.getCore().applyTheme("sap_bluecrystal");
 	
 	//Navigate to Home Master View
 	sap.ui.getCore().getEventBus().publish("nav", "to", {id : "blueui5-home-master",
@@ -88,6 +94,34 @@ de.blue_danube_it.blueui5.App.prototype.init = function(){
 };
 
 de.blue_danube_it.blueui5._static = {
+		fetchGitHubUrls : function(oController){
+			var modulePath = jQuery.sap.getModulePath("de.blue_danube_it.blueui5").replace('.', '');
+			sUri = "https://github.com/pks5/blueui5/tree/master" + modulePath;
+			var oReturn = {
+				sView : sUri,
+				sController : sUri
+			};
+			
+			var bAdd = false;
+			oController.getView()._controllerName.split('.').forEach(function(sContent){
+				if(sContent === "controllers"){
+					bAdd = true;
+					oReturn.sView += '/views';
+					oReturn.sController += '/controllers';
+					return;
+				}
+				
+				if(!bAdd) return;
+				
+				oReturn.sView += "/"+ sContent;
+				oReturn.sController += "/"+ sContent;
+			});
+			
+			oReturn.sView += ".view.html";
+			oReturn.sController += ".controller.js";
+			
+			return oReturn;
+		},
 
 		modelifyController : function(oController){
 			var oContentModel = new sap.ui.model.json.JSONModel(oController);
@@ -96,7 +130,15 @@ de.blue_danube_it.blueui5._static = {
 
 		setControllerJsonModel : function(oController, modelPathFileName, nameSpace){
 			var jsonModel = new sap.ui.model.json.JSONModel();
+			
 			jsonModel.loadData(jQuery.sap.getModulePath("de.blue_danube_it.blueui5") + modelPathFileName, {}, false);
+			var sView = oController.getView()._controllerName.replace('controllers', 'views');
+			jsonModel.oData.items.forEach(function(oItem){
+				if(oItem.viewName === sView){
+					oItem.linkClass = 'active';
+				}
+			});
+			
 			oController.getView().setModel(jsonModel,nameSpace);
 		}
 

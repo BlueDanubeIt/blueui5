@@ -54,6 +54,12 @@
             		"id" : "bootstrapui5-links_buttons",
             		"ViewType" : "HTML",
       				"ViewName" : "de.blue_danube_it.blueui5.views.bootstrap.LinksButtons"
+        		},
+            	{
+            		"text" : "Bootstrap Table",
+            		"id" : "bootstrap-table-default",
+            		"ViewType" : "HTML",
+      				"ViewName" : "de.blue_danube_it.blueui5.views.bootstrap.table.Default"
         		}
         	]
         }
