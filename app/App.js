@@ -100,7 +100,7 @@ de.blue_danube_it.blueui5._static = {
 			var oReturn = {
 				sView : sUri,
 				sController : sUri
-			}
+			};
 			
 			var bAdd = false;
 			oController.getView()._controllerName.split('.').forEach(function(sContent){
@@ -130,7 +130,15 @@ de.blue_danube_it.blueui5._static = {
 
 		setControllerJsonModel : function(oController, modelPathFileName, nameSpace){
 			var jsonModel = new sap.ui.model.json.JSONModel();
+			
 			jsonModel.loadData(jQuery.sap.getModulePath("de.blue_danube_it.blueui5") + modelPathFileName, {}, false);
+			var sView = oController.getView()._controllerName.replace('controllers', 'views');
+			jsonModel.oData.items.forEach(function(oItem){
+				if(oItem.viewName === sView){
+					oItem.linkClass = 'active';
+				}
+			});
+			
 			oController.getView().setModel(jsonModel,nameSpace);
 		}
 

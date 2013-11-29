@@ -5,20 +5,7 @@
 			"viewType" : "HTML",
 			"viewName" : "de.blue_danube_it.blueui5.views.bootstrap.table.Default",
 			"viewId" : "bootstrap-table-default",
-			"clicked" : "de.blue_danube_it.blueui5._static.onLinkClicked"
-		},
-		{
-			"text" : "Boxes",
-			"viewType" : "HTML",
-			"viewName" : "de.blue_danube_it.blueui5.views.bootstrap.table.Default",
-			"viewId" : "bootstrap-table-default",
-			"clicked" : "de.blue_danube_it.blueui5._static.onLinkClicked"
-		},
-		{
-			"text" : "Different Setups",
-			"viewType" : "HTML",
-			"viewName" : "de.blue_danube_it.blueui5.views.bootstrap.table.Default",
-			"viewId" : "bootstrap-table-default",
+			"linkClass" : "",
 			"clicked" : "de.blue_danube_it.blueui5._static.onLinkClicked"
 		},
 		{
@@ -26,6 +13,7 @@
 			"viewType" : "HTML",
 			"viewName" : "de.blue_danube_it.blueui5.views.bootstrap.table.Odata",
 			"viewId" : "bootstrap-table-odata",
+			"linkClass" : "",
 			"clicked" : "de.blue_danube_it.blueui5._static.onLinkClicked"
 		}
 	]

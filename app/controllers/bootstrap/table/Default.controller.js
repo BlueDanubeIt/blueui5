@@ -18,6 +18,7 @@ sap.ui.controller("de.blue_danube_it.blueui5.controllers.bootstrap.table.Default
 		var oStaticHelper = de.blue_danube_it.blueui5._static;
 		oStaticHelper.modelifyController(this);
 		oStaticHelper.setControllerJsonModel(this, "/model/bootstrap/table/Navigation.json", "navigation");
+//		debugger;
 		var sUris = oStaticHelper.fetchGitHubUrls(this);
 		this.getView().byId('controllerLink').setHref(sUris.sController);
 		this.getView().byId('viewLink').setHref(sUris.sView);
