@@ -1,5 +1,10 @@
-sap.ui.controller("de.blue_danube_it.blueui5.controllers.bootstrap.table.Default", {
+sap.ui.controller("de.blue_danube_it.blueui5.controllers.bootstrap.table.Odata", {
 
+	// Connection success flag.
+	success : false,
+	// Reverse proxy setup to http://services.odata.org/Northwind/Northwind.svc/
+	sServiceUrl : "/northwind/",
+	
 	/**
 	* Controller initialization.
 	* Called one time on initialization.
@@ -33,104 +38,53 @@ sap.ui.controller("de.blue_danube_it.blueui5.controllers.bootstrap.table.Default
 	},
 	
 setupModel : function(){
-	var oModel = new sap.ui.model.json.JSONModel(this.tableModel);
-	this.getView().setModel(oModel, 'tableModel');
+	try {
+		// Set up connection. 
+		// Reverse proxy setup to http://services.odata.org/Northwind/Northwind.svc/
+		// Rewrite and redirect to /notrtwind/ on our server. (For detailed Information, see Odata Part of our documentation.)
+		var oModel = new sap.ui.model.odata.ODataModel(this.sServiceUrl, true);
+		if (oModel.getServiceMetadata()) {
+			this.getView().setModel(oModel, "tableModel");
+			this.success = true;
+		}
+	} catch (oException) {}
 },
 	
 setupTable : function(){
-	var oTable = this.byId("defaultTable");
+	var oTable = this.byId("odataTable");
 	
-	var oColText1 = new sap.ui.commons.TextView({
-		text : "{tableModel>col1}"
+	var oCol1 = new sap.ui.commons.TextView({
+		text : "{tableModel>CustomerID}"
 	});
-	
 	oTable.addColumn(new de.pksoftware.bootstrapui5.controls.table.Col({
 		header : new sap.ui.commons.Label({
-			text : "Name"
+			text : "Customer Id"
 		}),
-		template : oColText1
+		template : oCol1
 	}));
 	
-	var oColText2 = new sap.ui.commons.TextView({
-		text : "{tableModel>col2}"
+	var oCol2= new sap.ui.commons.TextView({
+		text : "{tableModel>CompanyName}"
 	});
+	oTable.addColumn(new de.pksoftware.bootstrapui5.controls.table.Col({
+		header : new sap.ui.commons.Label({
+			text : "Company Name"
+		}),
+		template : oCol2
+	}));
 	
+	var oCol3 = new sap.ui.commons.TextView({
+		text : "{tableModel>Country}"
+	});
 	oTable.addColumn(new de.pksoftware.bootstrapui5.controls.table.Col({
 		header : new sap.ui.commons.Label({
 			text : "Country"
 		}),
-		template : oColText2
+		template : oCol3
 	}));
 	
-	var oColText3 = new sap.ui.commons.TextView({
-		text : "{tableModel>col3}"
-	});
-	
-	oTable.addColumn(new de.pksoftware.bootstrapui5.controls.table.Col({
-		header : new sap.ui.commons.Label({
-			text : "City"
-		}),
-		template : oColText3
-	}));
-	
-	oTable.bindRows("tableModel>/items");
-},
-	
-	/**
-	 * Table Model, used for setup of demo table.
-	 * 
-	 * Items Array is our setup of Rows.
-	 * Each object entry in items represents one row and it's cell content.
-	 */
-	tableModel : {
-		"items" : [
-           {
-	   			"col1" : "Hans Wurst",
-	   			"col2" : "Germany",
-	   			"col3" : "Berlin"
-	   		},	   		
-	   		{
-	   			"col1" : "Joe Smith",
-	   			"col2" : "Kanada",
-	   			"col3" : "Montreal"
-	   		},	   		
-	   		{
-	   			"col1" : "Frensh Name",
-	   			"col2" : "France",
-	   			"col3" : "Paris"
-	   		},	   		
-	   		{
-	   			"col1" : "Klaus Dieter Bauer",
-	   			"col2" : "Hamburg",
-	   			"col3" : "Germany"
-	   		},	   		
-	   		{
-	   			"col1" : "Peter Hundertmark",
-	   			"col2" : "Hameln",
-	   			"col3" : "Germany"
-	   		},	   		
-	   		{
-	   			"col1" : "Koshi Moto",
-	   			"col2" : "Japan",
-	   			"col3" : "Tokyo"
-	   		},	   		
-	   		{
-	   			"col1" : "Wang Lee",
-	   			"col2" : "China",
-	   			"col3" : "Peking"
-	   		},	   		
-	   		{
-	   			"col1" : "Kalle Stupulli",
-	   			"col2" : "Frankfurt",
-	   			"col3" : "Germany"
-	   		},	   		
-	   		{
-	   			"col1" : "Anonymous Andy",
-	   			"col2" : "South Park",
-	   			"col3" : "USA"
-	   		},
-	   	]
-	}
+	oTable.bindRows("tableModel>/Customers");
+}
 /**
 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
 * (NOT before the first rendering! onInit() is used for that one!).

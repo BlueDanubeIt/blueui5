@@ -117,7 +117,7 @@ de.blue_danube_it.blueui5._static = {
 				oReturn.sController += "/"+ sContent;
 			});
 			
-			oReturn.sView += ".view.js";
+			oReturn.sView += ".view.html";
 			oReturn.sController += ".controller.js";
 			
 			return oReturn;

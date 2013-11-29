@@ -1,5 +1,5 @@
 <template
-	data-controller-name="de.blue_danube_it.blueui5.controllers.bootstrap.table.Default">
+	data-controller-name="de.blue_danube_it.blueui5.controllers.bootstrap.table.Odata">
 <div data-sap-ui-type="app.controls.templates.Common"
 	data-header="Bootstrap Tables" data-header-sub="Default Template"
 	data-lead-text="Default build of our Bootstrap Table."
@@ -7,7 +7,7 @@
 	
 	<!-- Demos Content BEGIN-->
 	<div data-sap-ui-aggregation="demos" data-bindable="bindable">
-		<div id="defaultTable" data-sap-ui-type="de.pksoftware.bootstrapui5.controls.table.Table"></div>
+		<div id="odataTable" data-sap-ui-type="de.pksoftware.bootstrapui5.controls.table.Table"></div>
 	</div>
 	<!-- Demos Content END-->
 	
@@ -30,15 +30,15 @@
 				data-text="Html setup">
 				
 				<div data-sap-ui-type="de.blue_danube_it.utils5.prettify.PrettyPrint">
-				<div>&lt;div id="defaultTable" data-sap-ui-type="de.pksoftware.bootstrapui5.controls.table.Table"&gt;&lt;/div&gt;</div>
+				<div>&lt;div id="odataTable" data-sap-ui-type="de.pksoftware.bootstrapui5.controls.table.Table"&gt;&lt;/div&gt;</div>
 				</div>
 			</div>
-			<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.Paragraph"
-				data-text="Model of our Table. @TODO: Prettify this...">
-				<div
-					data-sap-ui-type="de.blue_danube_it.utils5.prettify.PrettyPrint"
-					data-source="{pretty>/tableModel}"></div>
-			</div>
+<!-- 			<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.Paragraph" -->
+<!-- 				data-text="Model of our Table. @TODO: Prettify this..."> -->
+<!-- 				<div -->
+<!-- 					data-sap-ui-type="de.blue_danube_it.utils5.prettify.PrettyPrint" -->
+<!-- 					data-source="{pretty>/tableModel}"></div> -->
+<!-- 			</div> -->
 			
 			<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.Paragraph"
 				data-text="Setting up our model on view.">
