@@ -94,6 +94,34 @@ de.blue_danube_it.blueui5.App.prototype.init = function(){
 };
 
 de.blue_danube_it.blueui5._static = {
+		fetchGitHubUrls : function(oController){
+			var modulePath = jQuery.sap.getModulePath("de.blue_danube_it.blueui5").replace('.', '');
+			sUri = "https://github.com/pks5/blueui5/tree/master" + modulePath;
+			var oReturn = {
+				sView : sUri,
+				sController : sUri
+			}
+			
+			var bAdd = false;
+			oController.getView()._controllerName.split('.').forEach(function(sContent){
+				if(sContent === "controllers"){
+					bAdd = true;
+					oReturn.sView += '/views';
+					oReturn.sController += '/controllers';
+					return;
+				}
+				
+				if(!bAdd) return;
+				
+				oReturn.sView += "/"+ sContent;
+				oReturn.sController += "/"+ sContent;
+			});
+			
+			oReturn.sView += ".view.js";
+			oReturn.sController += ".controller.js";
+			
+			return oReturn;
+		},
 
 		modelifyController : function(oController){
 			var oContentModel = new sap.ui.model.json.JSONModel(oController);

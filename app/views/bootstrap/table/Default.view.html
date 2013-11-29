@@ -1,0 +1,64 @@
+<template
+	data-controller-name="de.blue_danube_it.blueui5.controllers.bootstrap.table.Default">
+<div data-sap-ui-type="app.controls.templates.Common"
+	data-header="Bootstrap Tables" data-header-sub="Default Template"
+	data-lead-text="Default build of our Bootstrap Table."
+	data-navigations="{navigation>/items}">
+	
+	<!-- Demos Content -->
+	<div data-sap-ui-aggregation="demos" data-bindable="bindable">
+		<div id="defaultTable" data-sap-ui-type="de.pksoftware.bootstrapui5.controls.table.Table"></div>
+	</div>
+	
+	<!-- Descriptions Content -->
+	<div data-sap-ui-aggregation="descriptions">
+		<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.SubHeading"
+			data-icon="glyphicon glyphicon-list"
+			data-header-text="Setup and bind our default table."
+			data-sub-text="Comming...">
+			<div id="controllerLink" data-sap-ui-type="sap.ui.commons.Link" data-text="Link to user Controller"></div>
+			<div id="viewLink" data-sap-ui-type="sap.ui.commons.Link" data-text="Link to user Controller"></div>
+			
+			<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.Paragraph"
+				data-text="Html setup">
+				
+				<div data-sap-ui-type="de.blue_danube_it.utils5.prettify.PrettyPrint">
+				<div>&lt;div id="defaultTable" data-sap-ui-type="de.pksoftware.bootstrapui5.controls.table.Table"&gt;&lt;/div&gt;</div>
+				</div>
+			</div>
+			<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.Paragraph"
+				data-text="Model of our Table. @TODO: Prettify this...">
+				<div
+					data-sap-ui-type="de.blue_danube_it.utils5.prettify.PrettyPrint"
+					data-source="{pretty>/tableModel}"></div>
+			</div>
+			
+			<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.Paragraph"
+				data-text="Setting up our model on view.">
+				<div data-sap-ui-type="de.blue_danube_it.utils5.prettify.PrettyPrint" data-source="{pretty>/setupModel}"></div>
+			</div>
+			
+			<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.Paragraph"
+				data-text="Binding our Table.">
+				<div data-sap-ui-type="de.blue_danube_it.utils5.prettify.PrettyPrint" data-source="{pretty>/setupTable}"></div>
+			</div>
+			
+			
+		</div>
+	</div>
+	
+	
+	<!-- Navigations Content -->
+	<div data-sap-ui-aggregation="navigations" data-bindable="bindable">
+		<div data-sap-ui-type="de.pksoftware.bootstrapui5.controls.Link" 
+		data-text="{navigation>text}" 
+		data-view-id="{navigation>viewId}"
+		data-view-name="{navigation>viewName}"
+		data-view-type="{navigation>viewType}"
+		data-clicked="de.blue_danube_it.blueui5._static.onLinkClicked"
+		>
+   		</div>
+	</div>
+</div>
+</template>
+
