@@ -14,7 +14,7 @@ sap.ui.controller("de.blue_danube_it.blueui5.controllers.sandbox.markus.Navigati
 	onInit: function() {
 		this.testJsonTable();
 //		this.testJsonTable1();
-		this.testOdataTable();
+//		this.testOdataTable();
 //		this.testSapTable();
 	},
 
