@@ -102,13 +102,13 @@ setupTable : function(){
 	   		},	   		
 	   		{
 	   			"col1" : "Klaus Dieter Bauer",
-	   			"col2" : "Hamburg",
-	   			"col3" : "Germany"
+	   			"col2" : "Germany",
+	   			"col3" : "Hamburg"
 	   		},	   		
 	   		{
 	   			"col1" : "Peter Hundertmark",
-	   			"col2" : "Hameln",
-	   			"col3" : "Germany"
+	   			"col2" : "Germany",
+	   			"col3" : "Hameln"
 	   		},	   		
 	   		{
 	   			"col1" : "Koshi Moto",
@@ -122,13 +122,13 @@ setupTable : function(){
 	   		},	   		
 	   		{
 	   			"col1" : "Kalle Stupulli",
-	   			"col2" : "Frankfurt",
-	   			"col3" : "Germany"
+	   			"col2" : "Germany",
+	   			"col3" : "Frankfurt"
 	   		},	   		
 	   		{
 	   			"col1" : "Anonymous Andy",
-	   			"col2" : "South Park",
-	   			"col3" : "USA"
+	   			"col2" : "USA",
+	   			"col3" : "South Park"
 	   		},
 	   	]
 	}
