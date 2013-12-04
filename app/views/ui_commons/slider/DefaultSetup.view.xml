@@ -4,7 +4,7 @@
 	xmlns:bootstrap="de.pksoftware.bootstrapui5.controls"
 	xmlns="sap.ui.commons"
 	xmlns:pretty="de.blue_danube_it.utils5.prettify"
-	controllerName="de.blue_danube_it.blueui5.controllers.sandbox.marius.MyView" 
+	controllerName="de.blue_danube_it.blueui5.controllers.ui_commons.slider.DefaultSetup" 
 	xmlns:html="http://www.w3.org/1999/xhtml">
 	
 	<bootstrap:PageHeader headerText="Slider" subText="How to build a simple slider with SAPUI5" />

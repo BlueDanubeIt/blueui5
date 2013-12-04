@@ -32,7 +32,7 @@
             	{
                     "id": "ui_commons-slider",
                     "text": "Slider",
-                	"ViewType" : "XML",
+                	"ViewType" : "HTML",
       				"ViewName" : "de.blue_danube_it.blueui5.views.ui_commons.slider.DefaultSetup"
                 }
             ]
